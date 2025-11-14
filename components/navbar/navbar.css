@@ -1,0 +1,59 @@
+.navbar {
+    background: white;
+    padding: 12px;
+    margin: 1px;
+}
+
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img {
+    cursor: pointer;
+    width: 2vw;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: center;
+    gap: 20vw;
+}
+
+.nav-links a {
+    font-family: 'PP Mori';
+    color: #D2042D;
+    text-decoration: none;
+    font-size: 1vw;
+    letter-spacing: 0.5px;
+    transition: opacity 0.3s;
+    font-weight: bold;
+}
+
+body {
+    margin: 0;
+    padding: 1px;
+    border: .7vw solid #D2042D;
+    min-height: 100vh;
+    box-sizing: border-box;
+}
+
+/*
+.nav-links a:hover {
+    
+}
+*/
+
+@media (max-width: 768px) {
+    .navbar-container {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+}
