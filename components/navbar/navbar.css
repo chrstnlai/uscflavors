@@ -1,59 +1,175 @@
 .navbar {
-    background: white;
-    padding: 12px;
-    margin: 1px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 200px; 
+    padding: 30px 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; 
+    align-items: flex-end; 
+    
+    /* 1. Ensure background is semi-transparent */
+    background: rgba(222, 222, 222, 0); 
+    
+    /* 2. ADD THIS FOR THE BLUR */
+    backdrop-filter: blur(100px);
+    -webkit-backdrop-filter: blur(100px); /* For Safari */
+    
+    z-index: 10; /* Ensure this is on top of the text */
 }
 
-.navbar-container {
+
+.navbar-header {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    flex-direction: column;
+    align-items: flex-end;
+    width: 100%;
+}
+
+.menu-toggle {
+    display: none; 
 }
 
 .logo img {
     cursor: pointer;
-    width: 2vw;
+    width: 50px; 
+    height: auto;
+}
+
+.nav-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    width: 100%;
+    margin-top: 40px; 
 }
 
 .nav-links {
     display: flex;
-    justify-content: center;
-    gap: 20vw;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 12px;
 }
 
 .nav-links a {
-    font-family: 'PP Mori';
-    color: #D2042D;
+    font-family: 'PP Neue Montreal', sans-serif;
+    color: #ffffff;
     text-decoration: none;
-    font-size: 1vw;
+    font-size: 15px;
+    line-height: 1.5;
     letter-spacing: 0.5px;
-    transition: opacity 0.3s;
     font-weight: bold;
-}
-
-body {
-    margin: 0;
-    padding: 1px;
-    border: .7vw solid #D2042D;
-    min-height: 100vh;
-    box-sizing: border-box;
-}
-
-/*
-.nav-links a:hover {
+    text-transform: uppercase;
+    text-align: right;
     
-}
-*/
+    /* --- NEW BOX STYLES --- */
+    background-color: #ffffff; /* The "USC Red" box */
+    padding: 9px 18px;         /* Size of the box */
+    display: inline-block;     /* Ensures padding works correctly */
+    width: fit-content;        /* Ensures box only wraps the text */
+    /* ---------------------- */
+    color: #D2042D;  
 
-@media (max-width: 768px) {
-    .navbar-container {
+    transition: all 0.3s ease; /* Smooth fade for the box */
+}
+
+.nav-links a:hover {
+    /* --- HOVER STATE --- */
+    color: #ffffff;                /* Text turns red so it's still visible */
+    text-decoration: none;         /* Optional: remove underline if you prefer clean look */
+    opacity: 1;                    /* Keep text fully opaque */
+    background-color: #D2042D;
+}
+
+
+.nav-footer {
+    text-align: right;
+    color: #D2042D;
+    font-family: 'PP Mori', sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    line-height: 1.4;
+}
+
+.nav-footer p {
+    margin: 0;
+}
+
+
+@media (max-width: 768px) or (max-height: 768px) {
+    .navbar {
+        width: 100%;
+        height: auto;
+        flex-direction: row; 
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px;
+        background: white; 
+        border-bottom: 1px solid #f0f0f0;
+    }
+
+    .navbar-header {
+        flex-direction: row; 
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+    }
+
+    .logo img {
+        width: 50px; 
+    }
+
+    .menu-toggle {
+        display: block; 
+        background: none;
+        border: none;
+        font-family: 'PP Neue Montreal', sans-serif;
+        color: #D2042D;
+        font-weight: bold;
+        font-size: 21px;
+        cursor: pointer;
+        padding: 5px;
+    }
+
+    .nav-content {
+        position: fixed;
+        top: 80px; 
+        left: 0;
+        width: 100%;
+        height: calc(100vh - 80px);
+        background: white;
+        
         flex-direction: column;
-        gap: 20px;
+        justify-content: center; 
+        align-items: center;    
+        gap: 40px;
+        padding-bottom: 50px;
+        
+        display: none; 
+        margin-top: 0;
+        z-index: 998;
+    }
+
+    .nav-content.open {
+        display: flex;
     }
 
     .nav-links {
-        flex-wrap: wrap;
-        justify-content: center;
+        align-items: center; 
+        gap: 25px; 
     }
 
+    .nav-links a {
+        font-size: 20px; 
+        text-align: center;
+    }
+
+    .nav-footer {
+        text-align: center;
+        position: absolute;
+        bottom: 40px;
+    }
 }
