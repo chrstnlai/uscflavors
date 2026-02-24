@@ -1,4 +1,3 @@
-/* Fonts and Global Styles */
 
 @font-face {
     font-family: 'PP Mori';
@@ -43,69 +42,35 @@ body {
 
 .marquee-container {
     width: 100vw;
-    overflow: hidden; /* Hide the scrollbar */
+    overflow: hidden; 
     position: relative;
-    margin-top: 5vh; /* Adjust vertical position here */
+    margin-top: 5vh;
     z-index: 0;
 }
 
 .marquee-track {
     display: flex;
     white-space: nowrap;
-    width: max-content; /* Ensure container fits both text copies */
-    
-    /* THE ANIMATION */
-    /* We move it -50% because that is exactly the width of ONE copy */
+    width: max-content; 
+
     animation: scrollText 20s linear infinite;
 }
 
 .headerBox {
-    /* Keep your typography */
     font-family: 'PP Neue Montreal Bold', sans-serif;
     font-weight: 800;
     color: #D2042D;
     text-transform: uppercase;
     line-height: 0.8;
-    
-    /* Keep your size */
-    font-size: 459px; 
-
-    /* IMPORTANT: Remove old positioning */
-    /* width: 100vw;  <-- REMOVE THIS */
-    /* position: relative; <-- REMOVE THIS */
-    /* left: 0; <-- REMOVE THIS */
-    /* animation: ... <-- REMOVE THIS (moved to track) */
-    
-    /* Add spacing between the two copies so they don't touch */
+    font-size: 49px; 
     padding-right: 100px; 
 }
 
-/* The Seamless Logic */
-@keyframes scrollText {
-    0% {
-        transform: translateX(0);
-    }
-    100% {
-        /* Move exactly half the width (the width of one text set) */
-        transform: translateX(-50%); 
-    }
-}
-
-/* --- MOBILE --- */
 @media (max-width: 768px) or (max-height: 768px)  {
     .marquee-track {
-        /* Disable scroll on mobile if you want */
         animation: none;
         flex-direction: column;
         width: 100%;
     }
-    
-    .headerBox {
-        display: none;
-    }
-    
-    /* Hide the second copy on mobile so it doesn't look weird */
-    .headerBox:nth-child(2) {
-        display: none;
-    }
+
 }

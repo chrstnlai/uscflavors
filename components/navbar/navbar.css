@@ -3,23 +3,17 @@
     top: 0;
     right: 0;
     height: 100vh;
-    width: 200px; 
-    padding: 30px 30px;
+    width: 300px; 
+    padding: 30px 50px;
     display: flex;
     flex-direction: column;
     justify-content: space-between; 
     align-items: flex-end; 
     
-    /* 1. Ensure background is semi-transparent */
-    background: rgba(222, 222, 222, 0); 
+    background: transparent; 
     
-    /* 2. ADD THIS FOR THE BLUR */
-    backdrop-filter: blur(100px);
-    -webkit-backdrop-filter: blur(100px); /* For Safari */
-    
-    z-index: 10; /* Ensure this is on top of the text */
+    z-index: 10;
 }
-
 
 .navbar-header {
     display: flex;
@@ -34,8 +28,9 @@
 
 .logo img {
     cursor: pointer;
-    width: 50px; 
+    width: 80px; 
     height: auto;
+    padding-top: 10px;
 }
 
 .nav-content {
@@ -44,7 +39,7 @@
     justify-content: space-between;
     height: 100%;
     width: 100%;
-    margin-top: 40px; 
+    margin-top: 50px; 
 }
 
 .nav-links {
@@ -58,30 +53,36 @@
     font-family: 'PP Neue Montreal', sans-serif;
     color: #ffffff;
     text-decoration: none;
-    font-size: 15px;
-    line-height: 1.5;
+    font-size: 14px;
+    line-height: .75;
     letter-spacing: 0.5px;
     font-weight: bold;
     text-transform: uppercase;
     text-align: right;
     
     /* --- NEW BOX STYLES --- */
-    background-color: #ffffff; /* The "USC Red" box */
-    padding: 9px 18px;         /* Size of the box */
-    display: inline-block;     /* Ensures padding works correctly */
-    width: fit-content;        /* Ensures box only wraps the text */
-    /* ---------------------- */
+    background-color: #ffffff; 
+    padding: 3px 6px;       
+    display: inline-block;    
+    width: fit-content;       
     color: #D2042D;  
 
-    transition: all 0.3s ease; /* Smooth fade for the box */
+    transition: transform 1.1s ease, opacity .5s ease, background-color .01s;
+    transform: translateX(0);
+}
+
+.nav-links:hover a {
+    transform: translateX(20px); 
+    opacity: 0.2; 
 }
 
 .nav-links a:hover {
-    /* --- HOVER STATE --- */
-    color: #ffffff;                /* Text turns red so it's still visible */
-    text-decoration: none;         /* Optional: remove underline if you prefer clean look */
-    opacity: 1;                    /* Keep text fully opaque */
+    transform: translateX(0) !important; 
+    opacity: 1 !important;
+    
     background-color: #D2042D;
+    color: #ffffff;
+    text-decoration: none;
 }
 
 

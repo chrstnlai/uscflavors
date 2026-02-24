@@ -1,0 +1,64 @@
+.container {
+  width: 100%;
+  min-height: 100vh;
+  background-color: white;
+}
+
+.main {
+  padding: 60px 80px;
+  max-width: 800px;
+}
+
+.heading {
+  font-family: 'PP Neue Montreal Bold', sans-serif;
+  font-weight: 800;
+  font-size: 49px;
+  color: #D2042D;
+  text-transform: uppercase;
+  line-height: 0.8;
+  margin-bottom: 28px;
+}
+
+.sectionTitle {
+  font-family: 'PP Neue Montreal Bold', sans-serif;
+  font-weight: 800;
+  font-size: 14px;
+  color: #D2042D;
+  text-transform: uppercase;
+  text-decoration: underline;
+  margin-top: 24px;
+  margin-bottom: 8px;
+}
+
+.paragraph {
+  font-family: 'PP Neue Montreal', sans-serif;
+  font-weight: 500;
+  font-size: 13px;
+  color: #D2042D;
+  text-transform: uppercase;
+  line-height: 1.6;
+  margin-bottom: 6px;
+}
+
+.footer {
+  margin-top: 40px;
+}
+
+@media (max-width: 768px), (max-height: 768px) {
+  .main {
+    padding: 40px 24px;
+  }
+
+  .heading {
+    font-size: 32px;
+    margin-bottom: 20px;
+  }
+
+  .sectionTitle {
+    font-size: 12px;
+  }
+
+  .paragraph {
+    font-size: 11px;
+  }
+}

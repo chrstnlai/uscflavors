@@ -7,13 +7,11 @@ import "./navbar.css";
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
-  // Close menu when a link is clicked
   const closeMenu = () => setIsOpen(false);
 
   return (
     <nav className="navbar">
       
-      {/* 1. Header Row (Visible on Mobile & Desktop) */}
       <div className="navbar-header">
         <Link href="/" className="logo" onClick={closeMenu}>
           <Image 
@@ -25,7 +23,6 @@ export default function Navbar() {
           />
         </Link>
 
-        {/* Hamburger Button - Hidden on Desktop via CSS */}
         <button 
           className="menu-toggle" 
           onClick={() => setIsOpen(!isOpen)}
@@ -35,15 +32,14 @@ export default function Navbar() {
         </button>
       </div>
 
-      {/* 2. Collapsible Content (Sidebar on Desktop / Overlay on Mobile) */}
       <div className={`nav-content ${isOpen ? 'open' : ''}`}>
         <div className="nav-links">
-          <Link href="#" onClick={closeMenu}>ABOUT US</Link>
-          <Link href="#" onClick={closeMenu}>EVENTS</Link>
-          <Link href="#" onClick={closeMenu}>GALLERY</Link>
-          <Link href="#" onClick={closeMenu}>MEMBERSHIP</Link>
-          <Link href="#" onClick={closeMenu}>COLLABORATIONS</Link>
-          <Link href="#" onClick={closeMenu}>CONTACT</Link>
+          <Link href="/about-us" onClick={closeMenu}>ABOUT US</Link>
+          <Link href="/events" onClick={closeMenu}>EVENTS</Link>
+          <Link href="/gallery" onClick={closeMenu}>GALLERY</Link>
+          <Link href="/membership" onClick={closeMenu}>MEMBERSHIP</Link>
+          <Link href="/collaborations" onClick={closeMenu}>COLLABORATIONS</Link>
+          <Link href="/contact" onClick={closeMenu}>CONTACT</Link>
         </div>
 
         <div className="nav-footer">

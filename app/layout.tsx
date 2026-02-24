@@ -1,5 +1,3 @@
-/* Root Layout */
-
 import "./globals.css";
 import Navbar from "../components/navbar/navbar";
 
