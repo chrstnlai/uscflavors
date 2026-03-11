@@ -1,3 +1,4 @@
+/* ─── Fonts ─── */
 
 @font-face {
     font-family: 'PP Mori';
@@ -28,10 +29,73 @@
     font-style: normal;
 }
 
+/* ─── Reset ─── */
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+/* ─── Cursors ─── */
+
+*,
+body {
+    cursor: url('/cursors/wooden-spoon.ico') 0 32, auto;
+}
+
+a,
+button,
+[role="button"],
+input[type="submit"],
+input[type="button"],
+.menu-toggle,
+.logo,
+.logo img,
+.nav-links a {
+    cursor: url('/cursors/spatula.ico') 0 32, pointer;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="search"],
+textarea,
+select,
+[contenteditable="true"] {
+    cursor: url('/cursors/pan.ico') 16 16, text;
+}
+
+[draggable="true"],
+.draggable,
+.grab {
+    cursor: url('/cursors/spatula.ico'), grab;
+}
+
+[draggable="true"]:active,
+.draggable:active,
+.grab:active {
+    cursor: url('/cursors/pan.ico') 16 16, grabbing;
+}
+
+[aria-busy="true"],
+.loading,
+.wait {
+    cursor: url('/cursors/pot.ico') 16 16, wait;
+}
+
+button:disabled,
+input:disabled,
+[aria-disabled="true"],
+.disabled {
+    cursor: not-allowed;
+}
+
+/* ─── Body ─── */
+
+
+.page-content {
+    padding: 60px 50px;
 }
 
 body {
@@ -40,37 +104,33 @@ body {
     overflow-x: hidden;
 }
 
-.marquee-container {
-    width: 100vw;
-    overflow: hidden; 
-    position: relative;
-    margin-top: 5vh;
-    z-index: 0;
-}
-
-.marquee-track {
-    display: flex;
-    white-space: nowrap;
-    width: max-content; 
-
-    animation: scrollText 20s linear infinite;
-}
-
-.headerBox {
+.heading {
     font-family: 'PP Neue Montreal Bold', sans-serif;
     font-weight: 800;
+    font-size: 49px;
     color: #D2042D;
-    text-transform: uppercase;
     line-height: 0.8;
-    font-size: 49px; 
-    padding-right: 100px; 
 }
 
-@media (max-width: 768px) or (max-height: 768px)  {
-    .marquee-track {
-        animation: none;
-        flex-direction: column;
-        width: 100%;
+.subheading {
+    font-family: 'PP Neue Montreal', sans-serif;
+    font-weight: 800;
+    font-size: 13px;
+
+    color: #D2042D;
+    letter-spacing: 0.02em;
+}
+
+@media (max-width: 768px), (max-height: 768px) {
+    .heading {
+        font-size: 32px;
     }
 
+    .subheading {
+        font-size: 11px;
+    }
+
+    .page-content {
+        padding: 30px 24px;
+    }
 }

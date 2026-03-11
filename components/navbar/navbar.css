@@ -1,10 +1,11 @@
+
 .navbar {
     position: fixed;
     top: 0;
     right: 0;
     height: 100vh;
-    width: 300px; 
-    padding: 30px 50px;
+    width: 250px; 
+    padding: 25px 55px;
     display: flex;
     flex-direction: column;
     justify-content: space-between; 
@@ -13,6 +14,8 @@
     background: transparent; 
     
     z-index: 10;
+
+    animation: navFadeIn 2s ease;
 }
 
 .navbar-header {
@@ -20,6 +23,8 @@
     flex-direction: column;
     align-items: flex-end;
     width: 100%;
+
+    animation: navFadeIn 0.6s ease;
 }
 
 .menu-toggle {
@@ -27,10 +32,11 @@
 }
 
 .logo img {
-    cursor: pointer;
+    cursor: url('/cursors/spatula.ico') 0 32, pointer;
     width: 80px; 
     height: auto;
-    padding-top: 10px;
+    padding-top: 30px;
+    padding-left: 20px;
 }
 
 .nav-content {
@@ -39,7 +45,9 @@
     justify-content: space-between;
     height: 100%;
     width: 100%;
-    margin-top: 50px; 
+    margin-top: 50px;
+
+    animation: navFadeIn 0.8s ease;
 }
 
 .nav-links {
@@ -51,28 +59,27 @@
 
 .nav-links a {
     font-family: 'PP Neue Montreal', sans-serif;
-    color: #ffffff;
     text-decoration: none;
-    font-size: 14px;
+    font-size: 12px;
     line-height: .75;
-    letter-spacing: 0.5px;
+    letter-spacing: .5px;
     font-weight: bold;
     text-transform: uppercase;
     text-align: right;
     
-    /* --- NEW BOX STYLES --- */
-    background-color: #ffffff; 
-    padding: 3px 6px;       
+    background-color: white; 
+    padding: 3px 1px;       
     display: inline-block;    
     width: fit-content;       
     color: #D2042D;  
 
-    transition: transform 1.1s ease, opacity .5s ease, background-color .01s;
+    transition: transform .5s ease, opacity .2s ease, background-color .1s;
     transform: translateX(0);
+
 }
 
 .nav-links:hover a {
-    transform: translateX(20px); 
+    transform: translateX(30px); 
     opacity: 0.2; 
 }
 
@@ -85,20 +92,19 @@
     text-decoration: none;
 }
 
-
 .nav-footer {
     text-align: right;
     color: #D2042D;
     font-family: 'PP Mori', sans-serif;
-    font-size: 12px;
+    font-size: 10px;
     font-weight: bold;
     line-height: 1.4;
+
 }
 
 .nav-footer p {
     margin: 0;
 }
-
 
 @media (max-width: 768px) or (max-height: 768px) {
     .navbar {
@@ -107,7 +113,7 @@
         flex-direction: row; 
         justify-content: space-between;
         align-items: center;
-        padding: 20px;
+        padding: 10px;
         background: white; 
         border-bottom: 1px solid #f0f0f0;
     }
@@ -130,14 +136,15 @@
         font-family: 'PP Neue Montreal', sans-serif;
         color: #D2042D;
         font-weight: bold;
-        font-size: 21px;
+        font-size: 24px;
         cursor: pointer;
-        padding: 5px;
+        padding: 11px;
+        padding-top: 40px;
     }
 
     .nav-content {
         position: fixed;
-        top: 80px; 
+        top: 100px; 
         left: 0;
         width: 100%;
         height: calc(100vh - 80px);
@@ -147,10 +154,10 @@
         justify-content: center; 
         align-items: center;    
         gap: 40px;
-        padding-bottom: 50px;
+        padding-bottom: 100px;
         
         display: none; 
-        margin-top: 0;
+        margin-top: 10px;
         z-index: 998;
     }
 
@@ -172,5 +179,19 @@
         text-align: center;
         position: absolute;
         bottom: 40px;
+    }
+
+    .nav-links:hover a {
+        transform: translateY(3px); 
+        opacity: 0.2; 
+    }
+
+    .nav-links a:hover {
+        transform: translateY(0) !important; 
+        opacity: 1 !important;
+        
+        background-color: #D2042D;
+        color: #ffffff;
+        text-decoration: none;
     }
 }
