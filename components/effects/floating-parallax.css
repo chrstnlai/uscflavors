@@ -1,3 +1,12 @@
+@keyframes floatFadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
 .floating-parallax {
     position: relative;
     width: 100%;
@@ -10,6 +19,9 @@
     pointer-events: none;
     will-change: transform;
     z-index: 0;
+
+    opacity: 0;
+    animation: floatFadeIn 0.6s ease forwards;
 }
 
 .floating-image {

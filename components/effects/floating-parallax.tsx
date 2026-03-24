@@ -112,6 +112,7 @@ export default function FloatingParallax({
                         width: img.width,
                         height: img.height,
                         zIndex: img.zIndex ?? 0,
+                        animationDelay: `${i * 0.15}s`,
                     }}
                 >
                     <img

@@ -4,7 +4,7 @@ export default function Membership() {
   return (
     <div className={styles.container}>
       <main className={styles.main}>
-        <h1 className={styles.heading}>MEMBERSHIP</h1>
+        <h1 className={styles.heading}>membership</h1>
 
         <h2 className={styles.sectionTitle}>FALL 25 COHORT</h2>
         <p className={styles.paragraph}>

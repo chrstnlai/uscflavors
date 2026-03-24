@@ -43,9 +43,12 @@ export default function Navbar() {
         </div>
 
         <div className="nav-footer">
-          <p>FLAVORS</p>
+          <p>univserity of southern california</p>
+          <p>savor the moment</p>
+          {/*
           <p>UNIV. OF SOUTHERN CALIFORNIA</p>
           <p>SAVOR THE MOMENT.</p>
+          */}
         </div>
       </div>
 

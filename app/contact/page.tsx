@@ -6,7 +6,7 @@ export default function Contact() {
   return (
     <div className={styles.container}>
       <main className={styles.main}>
-        <h1 className={styles.heading}>ORDER HERE</h1>
+        <h1 className={styles.heading}>order here</h1>
         <p className={styles.subheading}>
           For any questions or inquiries, please reach out to us here and we'll get back to you within the next 1-3
           business days. uscflavors@gmail.com

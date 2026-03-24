@@ -4,9 +4,8 @@ export default function Events() {
   return (
     <div className={styles.container}>
       <main className={styles.main}>
-        <h1 className={styles.heading}>EVENTS</h1>
-        <hr className={styles.divider} />
-        <p className={styles.subheading}>CLICK ON EACH EVENT TO LEARN MORE.</p>
+        <h1 className={styles.heading}>events</h1>
+        <p className={styles.subheading}>*hint: click around to explore.</p>
       </main>
     </div>
   );
