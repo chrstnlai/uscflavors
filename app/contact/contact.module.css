@@ -71,7 +71,6 @@
   font-weight: 800;
   font-size: 13px;
   color: #D2042D;
-  text-transform: uppercase;
   margin-right: 10px;
   white-space: nowrap;
 }
@@ -104,8 +103,8 @@
 
 .textarea::placeholder {
   color: #D2042D;
-  opacity: 0.4;
-  text-transform: uppercase;
+  padding-top: 3px;
+  opacity: .4;
 }
 
 .submitRow {
@@ -123,7 +122,6 @@
   border: none;
   padding: 14px 60px;
   cursor: pointer;
-  text-transform: capitalize;
   letter-spacing: 0.02em;
 }
 

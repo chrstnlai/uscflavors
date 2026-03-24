@@ -6,7 +6,7 @@ const eventsImages = [
     src: "/images/home/1.avif",
     alt: "Flavors @ Night",
     top: "18%",
-    left: "20%",
+    left: "12%",
     width: "200px",
     height: "200px",
     depth: 28,
@@ -17,7 +17,7 @@ const eventsImages = [
     src: "/images/home/2.avif",
     alt: "Food Wars",
     top: "18%",
-    left: "55%",
+    left: "47%",
     width: "200px",
     height: "200px",
     depth: 35,
@@ -28,7 +28,7 @@ const eventsImages = [
     src: "/images/home/3.avif",
     alt: "Cultural Potluck",
     top: "42%",
-    left: "20%",
+    left: "12%",
     width: "200px",
     height: "200px",
     depth: 24,
@@ -39,7 +39,7 @@ const eventsImages = [
     src: "/images/home/4.avif",
     alt: "Steak N Skate",
     top: "42%",
-    left: "55%",
+    left: "47%",
     width: "200px",
     height: "200px",
     depth: 38,
@@ -50,7 +50,7 @@ const eventsImages = [
     src: "/images/home/5.avif",
     alt: "Meet to Eat",
     top: "66%",
-    left: "20%",
+    left: "12%",
     width: "200px",
     height: "200px",
     depth: 30,
@@ -61,7 +61,7 @@ const eventsImages = [
     src: "/images/home/6.avif",
     alt: "Sushi Workshop",
     top: "66%",
-    left: "55%",
+    left: "47%",
     width: "200px",
     height: "200px",
     depth: 22,
@@ -69,6 +69,8 @@ const eventsImages = [
     bio: "Learn how to roll your own sushi with guidance from expert chefs. All ingredients are provided, just bring your appetite and enthusiasm!",
   }
 ];
+
+
 
 export default function Events() {
   return (
