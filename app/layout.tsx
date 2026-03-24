@@ -3,11 +3,12 @@ import Navbar from "../components/navbar/navbar";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-    icons: {
-        icon: "/images/logo/logo_red.svg",
-        shortcut: "/images/logo/logo_red.svg",
-        apple: "/images/logo/logo_red.svg",
-    },
+  title: "USC Flavors",
+  icons: {
+      icon: "/images/logo/logo_red.svg",
+      shortcut: "/images/logo/logo_red.svg",
+      apple: "/images/logo/logo_red.svg",
+  },
 };
 
 export default function RootLayout({

@@ -1,10 +1,14 @@
 import "./globals.css";
+import LoadingScreen from "../components/loading/loading";
+import HomeSlider from "../components/home/home-slider";
 
 export default function Home() {
-    return (
-        <main className="page-content">
-            <h1 className="heading">usc flavors</h1>
-            <p className="subheading">savor the moment</p>
-        </main>
-    );
+  return (
+    <>
+      <LoadingScreen />
+      <HomeSlider />
+      <main className="page-content">
+      </main>
+    </>
+  );
 }

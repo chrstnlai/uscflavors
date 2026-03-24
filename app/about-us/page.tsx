@@ -1,24 +1,28 @@
 import styles from "./about.module.css";
-import MouseImageTrail from "../../components/effects/mouse-image-trail";
+import Image from "next/image";
 
 export default function AboutUs() {
   return (
     <>
       <div className={styles.container}>
         <main className={styles.main}>
-          <h1 className={styles.heading}>about us</h1>
+          <h1 className={styles.heading}>About Us</h1>
           <p className={styles.paragraph}>
-            FLAVORS IS A CULTURAL CLUB DEDICATED TO EXPERIENCING DIFFERENT CULTURES THROUGH TASTE, CUISINE, AND CONVERSATION.
-            FOOD IS NOT ONLY A WINDOW INTO UNDERSTANDING CULTURE BUT ALSO AN INCREDIBLE WAY TO BUILD MEANINGFUL RELATIONSHIPS. 
-            OUR GOAL IS TO "BREAK BREAD" WITH OUR PEERS, FOSTERING CONNECTIONS THROUGH A SHARED ENTHUSIASM FOR EXPLORING DIVERSE CUISINES AND CULTURES. 
-            TRYING NEW FOODS CAN BE AN ADVENTURE—SOMETIMES DAUNTING BUT ALWAYS EXCITING—AND WE AIM TO INSPIRE OPEN-MINDEDNESS IN EMBRACING THESE EXPERIENCES.
+            Flavors is a cultural club dedicated to experiencing different cultures through taste, cuisine, and conversation. Food is not only a window into understanding culture but also an incredible way to build meaningful relationships. Our goal is to “break bread” with our peers, fostering connections through a shared enthusiasm for exploring diverse cuisines and cultures. Trying new foods can be an adventure—sometimes daunting but always exciting—and we aim to inspire open-mindedness in embracing these experiences.
           </p>
           <p className={styles.paragraph}>
-            IN A WORLD INCREASINGLY DIVIDED BY LABELS, FLAVORS STRIVES TO CREATE AN OPEN ATMOSPHERE WHERE PEOPLE CAN TRANSCEND CULTURAL BARRIERS, 
-            ENGAGE IN MEANINGFUL DIALOGUE, AND TRULY GET TO KNOW ONE ANOTHER. 
-            BY BREAKING THE ICE, WE HOPE TO SPARK CONVERSATIONS THAT BRING TOGETHER PEOPLE FROM ALL WALKS OF LIFE TO SHARE THEIR STORIES, 
-            PASSIONS, AND VALUES, AND SIMPLY ENJOY GREAT CONVERSATIONS.
+            In a world increasingly divided by labels, Flavors strives to create an open atmosphere where people can transcend cultural barriers, engage in meaningful dialogue, and truly get to know one another. By breaking the ice, we hope to spark conversations that bring together people from all walks of life to share their stories, passions, and values, and simply enjoy great conversations.
           </p>
+          <div className={styles.imageContainer}>
+            <Image
+              src="/images/about/savorthemoment.avif"
+              alt="Savor the moment"
+              width={1000}
+              height={562}
+              className={styles.image}
+              priority
+            />
+          </div>
         </main>
       </div>
     </>

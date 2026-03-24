@@ -19,10 +19,9 @@
 }
 
 .subheading {
-  font-family: 'PP Neue Montreal Bold', sans-serif;
-  font-weight: 800;
-  font-size: 13px;
-  color: #D2042D;
+  font-family: 'PP Neue Montreal', sans-serif;
+  font-size: 12px;
+  color: #000000;
   letter-spacing: 0.02em;
 }
 
