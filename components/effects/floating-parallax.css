@@ -16,19 +16,68 @@
 
 .floating-image-wrap {
     position: absolute;
-    pointer-events: none;
+    pointer-events: auto;
     will-change: transform;
     z-index: 0;
-
     opacity: 0;
     animation: floatFadeIn 0.6s ease forwards;
+    cursor: pointer;
+    perspective: 1200px;
 }
 
-.floating-image {
+.card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    transform-style: preserve-3d;
+}
+
+.show-bio .card-inner {
+    transform: rotateY(180deg);
+}
+
+.card-front, .card-back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+}
+
+.card-front img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    border-radius: 4px;
+}
+
+.card-back {
+    background-color: #D2042D;
+    color: #ffffff;
+    padding: 24px;
+    transform: rotateY(180deg);
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    box-sizing: border-box;
+}
+
+.card-back p {
+    font-family: 'PP Neue Montreal', sans-serif;
+    font-size: 10px;
+    line-height: 1.23;
+    margin: 0;
+}
+
+.card-title-fixed {
+    margin-top: 14px;
+    color: #D2042D;
+    font-family: 'PP Neue Montreal Bold', sans-serif;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 0;
 }
 
 .floating-content {
@@ -36,4 +85,5 @@
     z-index: 2;
     width: 100%;
     min-height: 100vh;
+    pointer-events: none;
 }

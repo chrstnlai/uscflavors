@@ -1,9 +1,9 @@
 "use client";
 
-import { useRef, useEffect, useCallback } from "react";
+import { useRef, useEffect, useCallback, useState } from "react";
 import "./floating-parallax.css";
 
-type FloatingImage = {
+export type FloatingImage = {
     src: string;
     alt?: string;
     top: string;
@@ -12,6 +12,8 @@ type FloatingImage = {
     height: string;
     depth: number; 
     zIndex?: number;
+    title?: string;
+    bio?: string;
 };
 
 type FloatingParallaxProps = {
@@ -32,6 +34,19 @@ export default function FloatingParallax({
         images.map(() => ({ x: 0, y: 0 }))
     );
     const rafId = useRef<number | null>(null);
+    const [openBios, setOpenBios] = useState<Set<number>>(new Set());
+
+    const toggleBio = (index: number) => {
+        setOpenBios((prev) => {
+            const next = new Set(prev);
+            if (next.has(index)) {
+                next.delete(index);
+            } else {
+                next.add(index);
+            }
+            return next;
+        });
+    };
 
     const lerp = (start: number, end: number, factor: number) => {
         return start + (end - start) * factor;
@@ -63,7 +78,6 @@ export default function FloatingParallax({
             const centerX = rect.left + rect.width / 2;
             const centerY = rect.top + rect.height / 2;
 
-            // Normalize to range roughly -1 to 1
             mouse.current.x = (e.clientX - centerX) / (rect.width / 2);
             mouse.current.y = (e.clientY - centerY) / (rect.height / 2);
         },
@@ -71,7 +85,6 @@ export default function FloatingParallax({
     );
 
     const handleMouseLeave = useCallback(() => {
-        // Ease back to center
         mouse.current.x = 0;
         mouse.current.y = 0;
     }, []);
@@ -105,21 +118,31 @@ export default function FloatingParallax({
                     ref={(el) => {
                         imageRefs.current[i] = el;
                     }}
-                    className="floating-image-wrap"
+                    className={`floating-image-wrap ${openBios.has(i) ? "show-bio" : ""}`}
                     style={{
                         top: img.top,
                         left: img.left,
                         width: img.width,
                         height: img.height,
-                        zIndex: img.zIndex ?? 0,
+                        zIndex: openBios.has(i) ? 50 : (img.zIndex ?? 0),
                         animationDelay: `${i * 0.15}s`,
                     }}
+                    onClick={() => toggleBio(i)}
                 >
-                    <img
-                        src={img.src}
-                        alt={img.alt || ""}
-                        className="floating-image"
-                    />
+                    <div className="card-inner">
+                        <div className="card-front">
+                            <img
+                                src={img.src}
+                                alt={img.alt || ""}
+                                className="floating-image"
+                                draggable={false}
+                            />
+                        </div>
+                        <div className="card-back">
+                            <p>{img.bio}</p>
+                        </div>
+                    </div>
+                    <h3 className="card-title-fixed">{img.title}</h3>
                 </div>
             ))}
 

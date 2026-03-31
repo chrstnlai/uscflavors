@@ -112,7 +112,7 @@ export default function MouseImageTrail({
         image.style.opacity = "0";
         image.style.transform = "translate(-50%, -50%) scale(0.55)";
         image.style.display = "block";
-        image.style.zIndex = "0";
+        image.style.zIndex = "3";
 
         void image.offsetHeight;
 

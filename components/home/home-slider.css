@@ -1,0 +1,38 @@
+.slider-container {
+  position: fixed;
+  top: 70px;
+  left: 45px;
+  width: calc(100vw - 290px);
+  height: calc(80vh - 80px);
+  overflow: hidden;
+}
+
+.slide {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+}
+
+.slide.active {
+  opacity: 1;
+}
+
+.slide-image {
+  object-fit: cover;
+}
+
+@media (max-width: 768px) or (max-height: 768px) {
+    .slider-container {
+        position: fixed;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        width: 90vw;
+
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+
