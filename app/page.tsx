@@ -1,7 +1,7 @@
 import "./globals.css";
 import LoadingScreen from "../components/loading/loading";
 import HomeSlider from "../components/home/home-slider";
-import AnnouncementBar from "../components/announcemen/announcement-bar";
+import AnnouncementBar from "../components/announcements/announcement-bar";
 
 export default function Home() {
   return (
