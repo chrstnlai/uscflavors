@@ -5,89 +5,135 @@
 }
 
 .main {
-  padding: 60px 80px;
-  max-width: 800px;
+  padding: 80px 80px 120px;
+  max-width: 1100px;
+}
+
+.hero {
+  margin-bottom: 48px;
+}
+
+.eyebrow {
+  font-family: 'PP Mori', sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #D2042D;
+  opacity: 0.5;
+  margin-bottom: 12px;
 }
 
 .heading {
   font-family: 'PP Neue Montreal Bold', sans-serif;
   font-weight: 800;
-  font-size: 49px;
+  font-size: 8vw;
   color: #D2042D;
-  line-height: 0.8;
-  margin-bottom: 20px;
-  
+  line-height: 0.85;
+  margin: 0 0 28px;
+}
+
+.heroDivider {
+  width: 48px;
+  height: 3px;
+  background: #D2042D;
+  border-radius: 2px;
+  margin-bottom: 24px;
 }
 
 .subheading {
-  font-family: 'PP Neue Montreal Bold', sans-serif;
-  font-weight: 800;
+  font-family: 'PP Neue Montreal', sans-serif;
+  font-weight: 500;
   font-size: 13px;
   color: #D2042D;
-  line-height: 1.6;
-  margin-bottom: 32px;
-  max-width: 75%;
+  line-height: 1.75;
+  opacity: 0.8;
+  max-width: 520px;
+  margin: 0;
 }
 
-/* form */
+.emailLink {
+  color: #D2042D;
+  font-family: 'PP Neue Montreal Bold', sans-serif;
+  font-weight: 800;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.formCard {
+  border: 1.5px solid #D2042D;
+  border-radius: 20px;
+  overflow: hidden;
+  width: 65vw;
+  max-width: 800px;
+  margin-bottom: 24px;
+}
+
 .form {
   display: flex;
   flex-direction: column;
-  gap: 0;
-  width: 65vw;
 }
 
 .row {
   display: flex;
   flex-direction: row;
-  gap: 0;
-  margin-bottom: 0;
 }
 
 .inputGroup {
   display: flex;
-  align-items: center;
+  flex-direction: column;
   flex: 1;
-  border: 1.5px solid #D2042D;
-  padding: 12px 16px;
-  
+  padding: 20px 24px;
+  gap: 6px;
 }
 
-.inputGroup:first-child {
-  border-right: none;
+.inputDivider {
+  width: 1.5px;
+  background: rgba(210, 4, 45, 0.2);
+  flex-shrink: 0;
+}
+
+.rowDivider {
+  height: 1.5px;
+  background: rgba(210, 4, 45, 0.2);
+  width: 100%;
+}
+
+.label {
+  font-family: 'PP Mori', sans-serif;
+  font-weight: 700;
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #D2042D;
+  opacity: 0.5;
+}
+
+.input {
+  border: none;
+  outline: none;
+  font-family: 'PP Neue Montreal Bold', sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  color: #D2042D;
+  background: transparent;
+  padding: 0;
+}
+
+.input::placeholder {
+  color: #D2042D;
+  opacity: 0.25;
+  font-weight: 500;
 }
 
 .textareaGroup {
   display: flex;
   flex-direction: column;
-  border: 1.5px solid #D2042D;
-  border-top: none;
-  padding: 12px 16px;
-  
-}
-
-.label {
-  font-family: 'PP Neue Montreal Bold', sans-serif;
-  font-weight: 800;
-  font-size: 13px;
-  color: #D2042D;
-  margin-right: 10px;
-  white-space: nowrap;
-}
-
-.input {
-  flex: 1;
-  border: none;
-  outline: none;
-  font-family: 'PP Neue Montreal', sans-serif;
-  font-weight: 500;
-  font-size: 13px;
-  color: #D2042D;
-  background: transparent;
+  padding: 20px 24px;
+  gap: 8px;
 }
 
 .textarea {
-  flex: 1;
   border: none;
   outline: none;
   resize: none;
@@ -96,21 +142,31 @@
   font-size: 13px;
   color: #D2042D;
   background: transparent;
-  min-height: 100px;
-  margin-top: 1px;
-
+  min-height: 120px;
+  line-height: 1.7;
+  padding: 0;
 }
 
 .textarea::placeholder {
   color: #D2042D;
-  padding-top: 3px;
-  opacity: .4;
+  opacity: 0.3;
 }
 
 .submitRow {
   display: flex;
-  justify-content: flex-end;
-  margin-top: 16px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 24px;
+  background: #fdf0f2;
+}
+
+.submitNote {
+  font-family: 'PP Mori', sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  color: #D2042D;
+  opacity: 0.4;
 }
 
 .submitButton {
@@ -118,44 +174,111 @@
   color: white;
   font-family: 'PP Neue Montreal Bold', sans-serif;
   font-weight: 800;
-  font-size: 14px;
+  font-size: 13px;
   border: none;
-  padding: 14px 60px;
+  padding: 12px 32px;
+  border-radius: 999px;
   cursor: pointer;
-  letter-spacing: 0.02em;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  transition: opacity 0.2s ease;
 }
 
 .submitButton:hover {
-  background-color: #a8021f;
+  opacity: 0.8;
+}
+
+.altRow {
+  display: flex;
+  gap: 14px;
+  width: 65vw;
+  max-width: 800px;
+}
+
+.altCard {
+  flex: 1;
+  border: 1.5px solid rgba(210, 4, 45, 0.18);
+  border-radius: 16px;
+  padding: 18px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  transition: border-color 0.2s ease, background 0.2s ease;
+}
+
+.altCard:hover {
+  border-color: #D2042D;
+  background: #fdf0f2;
+}
+
+.altLabel {
+  font-family: 'PP Mori', sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #D2042D;
+  opacity: 0.45;
+  margin: 0;
+}
+
+.altValue {
+  font-family: 'PP Neue Montreal Bold', sans-serif;
+  font-weight: 800;
+  font-size: 13px;
+  color: #D2042D;
+  text-decoration: none;
+  margin: 0;
+  transition: opacity 0.2s;
+}
+
+a.altValue:hover {
+  opacity: 0.65;
+  text-decoration: underline;
+  text-underline-offset: 2px;
 }
 
 @media (max-width: 768px), (max-height: 768px) {
   .main {
-    padding: 40px 24px;
+    padding: 48px 24px 100px;
   }
 
   .heading {
-    font-size: 32px;
+    font-size: 14vw;
+    margin-bottom: 20px;
   }
 
   .subheading {
-    font-size: 11px;
+    font-size: 12px;
+    max-width: 100%;
+  }
+
+  .formCard {
+    width: 100%;
   }
 
   .row {
     flex-direction: column;
   }
 
-  .inputGroup:first-child {
-    border-right: 1.5px solid #D2042D;
-    border-bottom: none;
+  .inputDivider {
+    width: 100%;
+    height: 1.5px;
+  }
+
+  .altRow {
+    width: 100%;
+    flex-direction: column;
   }
 
   .submitButton {
     width: 100%;
+    text-align: center;
   }
-  
-  .form {
-    width: 100%;
+
+  .submitRow {
+    flex-direction: column;
+    gap: 12px;
+    align-items: flex-start;
   }
 }

@@ -1,61 +1,359 @@
 .container {
   width: 100%;
   min-height: 100vh;
-  background-color: white;
+  background-color: #fff;
 }
 
 .main {
-  padding: 60px 80px;
-  max-width: 800px;
+  padding: 80px 80px 120px;
+  max-width: 960px;
+}
+
+.hero {
+  margin-bottom: 56px;
+}
+
+.eyebrow {
+  font-family: 'PP Mori', sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #D2042D;
+  opacity: 0.55;
+  margin-bottom: 10px;
 }
 
 .heading {
   font-family: 'PP Neue Montreal Bold', sans-serif;
   font-weight: 800;
-  font-size: 49px;
+  font-size: 8vw;
+  line-height: 0.85;
   color: #D2042D;
-  line-height: 0.8;
-  margin-bottom: 28px;
+  margin: 0 0 28px;
+}
+
+.heroDivider {
+  width: 48px;
+  height: 3px;
+  background: #D2042D;
+  border-radius: 2px;
+}
+
+/* ── Intro Card ── */
+.introCard {
+  background: #fdf0f2;
+  border-left: 3px solid #D2042D;
+  border-radius: 0 12px 12px 0;
+  padding: 28px 32px;
+  margin-bottom: 48px;
+}
+
+.introText {
+  font-family: 'PP Neue Montreal', sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  color: #D2042D;
+  line-height: 1.75;
+  margin: 0 0 10px;
+}
+
+.introText:last-child {
+  margin-bottom: 0;
+}
+
+.highlight {
+  font-family: 'PP Neue Montreal Bold', sans-serif;
+  font-weight: 800;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+/* ── Two Column ── */
+.twoCol {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin-bottom: 64px;
+}
+
+.card {
+  border: 1.5px solid #D2042D;
+  border-radius: 16px;
+  padding: 28px 28px 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.cardDark {
+  background: #D2042D;
+}
+
+.cardTag {
+  font-family: 'PP Mori', sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #D2042D;
+  opacity: 0.6;
+}
+
+.cardTagLight {
+  color: #fff;
+  opacity: 0.65;
+}
+
+.cardTitle {
+  font-family: 'PP Neue Montreal Bold', sans-serif;
+  font-weight: 800;
+  font-size: 22px;
+  color: #D2042D;
+  margin: 0;
+}
+
+.cardTitleLight {
+  color: #fff;
+}
+
+.cardBody {
+  font-family: 'PP Neue Montreal', sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  color: #D2042D;
+  line-height: 1.65;
+  margin: 4px 0 0;
+}
+
+/* Pricing */
+.pricingRow {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-top: 12px;
+}
+
+.pricingItem {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.pricingAmount {
+  font-family: 'PP Neue Montreal Bold', sans-serif;
+  font-weight: 800;
+  font-size: 36px;
+  color: #fff;
+  line-height: 1;
+}
+
+.pricingLabel {
+  font-family: 'PP Mori', sans-serif;
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: rgba(255,255,255,0.7);
+  font-weight: 600;
+}
+
+.pricingDivider {
+  width: 1px;
+  height: 44px;
+  background: rgba(255,255,255,0.3);
+}
+
+.statusBadge {
+  margin-top: 18px;
+  display: inline-block;
+  padding: 6px 14px;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.15);
+  font-family: 'PP Mori', sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: rgba(255,255,255,0.85);
+  width: fit-content;
+}
+
+/* ── Sections ── */
+.section {
+  margin-bottom: 64px;
+}
+
+.sectionEyebrow {
+  font-family: 'PP Mori', sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #D2042D;
+  opacity: 0.5;
+  margin-bottom: 6px;
 }
 
 .sectionTitle {
   font-family: 'PP Neue Montreal Bold', sans-serif;
   font-weight: 800;
-  font-size: 14px;
+  font-size: 28px;
   color: #D2042D;
-  text-decoration: underline;
-  margin-top: 24px;
-  margin-bottom: 8px;
+  margin: 0 0 14px;
 }
 
-.paragraph {
+.sectionDesc {
   font-family: 'PP Neue Montreal', sans-serif;
+  font-size: 13px;
   font-weight: 500;
+  color: #D2042D;
+  line-height: 1.7;
+  max-width: 620px;
+  margin-bottom: 24px;
+  opacity: 0.8;
+}
+
+/* Events */
+.eventGrid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.eventChip {
+  font-family: 'PP Neue Montreal Bold', sans-serif;
+  font-weight: 700;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: #D2042D;
+  border: 1.5px solid #D2042D;
+  border-radius: 999px;
+  padding: 7px 18px;
+  transition: background 0.18s ease, color 0.18s ease;
+  cursor: default;
+}
+
+.eventChip:hover {
+  background: #D2042D;
+  color: #fff;
+}
+
+/* Values */
+.valuesGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.valueCard {
+  border: 1.5px solid rgba(210, 4, 45, 0.18);
+  border-radius: 14px;
+  padding: 22px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  transition: border-color 0.2s ease, background 0.2s ease;
+}
+
+.valueCard:hover {
+  border-color: #D2042D;
+  background: #fdf0f2;
+}
+
+.valueDot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #D2042D;
+  margin-bottom: 4px;
+}
+
+.valueLabel {
+  font-family: 'PP Neue Montreal Bold', sans-serif;
+  font-weight: 800;
   font-size: 13px;
   color: #D2042D;
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+}
+
+.valueDesc {
+  font-family: 'PP Neue Montreal', sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  color: #D2042D;
   line-height: 1.6;
-  margin-bottom: 6px;
+  opacity: 0.7;
+  margin: 0;
 }
 
-.footer {
-  margin-top: 40px;
+/* ── Contact Banner ── */
+.contactBanner {
+  margin-top: 16px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 24px 32px;
+  border: 1.5px solid #D2042D;
+  border-radius: 16px;
 }
 
+.contactText {
+  font-family: 'PP Neue Montreal Bold', sans-serif;
+  font-weight: 800;
+  font-size: 14px;
+  color: #D2042D;
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  white-space: nowrap;
+}
+
+.contactLink {
+  font-family: 'PP Neue Montreal', sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  color: #D2042D;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: opacity 0.2s;
+}
+
+.contactLink:hover {
+  opacity: 0.65;
+}
+
+/* ── Mobile ── */
 @media (max-width: 768px), (max-height: 768px) {
   .main {
-    padding: 40px 24px;
+    padding: 48px 24px 100px;
   }
 
   .heading {
-    font-size: 32px;
-    margin-bottom: 20px;
+    font-size: 64px;
+  }
+
+  .twoCol {
+    grid-template-columns: 1fr;
+  }
+
+  .valuesGrid {
+    grid-template-columns: 1fr;
   }
 
   .sectionTitle {
-    font-size: 12px;
+    font-size: 22px;
   }
 
-  .paragraph {
-    font-size: 11px;
+  .contactBanner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .pricingAmount {
+    font-size: 28px;
   }
 }

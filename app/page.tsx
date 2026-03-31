@@ -1,12 +1,16 @@
 import "./globals.css";
 import LoadingScreen from "../components/loading/loading";
 import HomeSlider from "../components/home/home-slider";
+import AnnouncementBar from "../components/announcemen/announcement-bar";
 
 export default function Home() {
   return (
     <>
+      <AnnouncementBar />
       <LoadingScreen />
-      <HomeSlider />
+      <div className="slider-wrapper">
+        <HomeSlider />
+      </div>
       <main className="page-content">
       </main>
     </>

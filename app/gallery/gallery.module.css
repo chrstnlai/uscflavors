@@ -1,51 +1,129 @@
 .container {
-    position: relative;
-    z-index: 2;
-    width: 100%;
-    height: 150px;
-    background-color: white;
-    pointer-events: none;
+  position: relative;
+  width: 100%;
+  background-color: transparent;
+  pointer-events: none;
 }
 
 .main {
-    position: relative;
-    z-index: 2;
-    padding: 60px 80px;
-    max-width: 1200px;
-    pointer-events: auto;
+  position: relative;
+  z-index: 3; 
+  padding: 80px 80px 0;
+  width: 100%;
+  max-width: 100%;
+  pointer-events: auto;
+  background-color: white;
+}
+
+.hero {
+  margin-bottom: 0;
+}
+
+.eyebrow {
+  font-family: 'PP Mori', sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #D2042D;
+  opacity: 0.5;
+  margin-bottom: 12px;
 }
 
 .heading {
-    position: relative;
-    z-index: 2;
-    font-family: 'PP Neue Montreal Bold', sans-serif;
-    font-weight: 800;
-    font-size: 49px;
-    color: #D2042D;
-    line-height: 0.8;
-    margin-bottom: 16px;
+  font-family: 'PP Neue Montreal Bold', sans-serif;
+  font-weight: 800;
+  font-size: 8vw;
+  color: #D2042D;
+  line-height: 0.85;
+  margin: 0 0 28px;
 }
 
-.subheading {
-    position: relative;
-    z-index: 2;
-    font-family: 'PP Neue Montreal', sans-serif;
-    font-size: 12px;
-    color: #000000;
-    letter-spacing: 0.02em;
+.heroDivider {
+  width: 48px;
+  height: 3px;
+  background: #D2042D;
+  border-radius: 2px;
+  margin-bottom: 32px;
+}
+
+.mouseHint {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  pointer-events: none;
+  z-index: 1;         
+  animation: hintFade 1s ease 0.5s both;
+  transition: opacity 0.4s ease;
+}
+
+.mouseHintHidden {
+  opacity: 0;
+}
+
+@keyframes hintFade {
+  from { opacity: 0; transform: translate(-50%, -50%) translateY(6px); }
+  to   { opacity: 1; transform: translate(-50%, -50%) translateY(0); }
+}
+
+.mouseIcon {
+  width: 28px;
+  height: 28px;
+  color: #D2042D;
+  animation: scrollBob 1s ease-in-out infinite;
+}
+
+@keyframes scrollBob {
+  0%, 100% { transform: translateY(0); }
+  50%       { transform: translateY(4px); }
+}
+
+.mouseLabel {
+  font-family: 'PP Mori', sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: #D2042D;
+  margin: 0;
+  opacity: 0.5;
+}
+
+.mouseLabelMobile {
+  display: none;
 }
 
 @media (max-width: 768px), (max-height: 768px) {
-    .main {
-        padding: 40px 24px;
-    }
+  .main {
+    padding: 48px 24px 0;
+  }
 
-    .heading {
-        font-size: 32px;
-        margin-bottom: 12px;
-    }
+  .heading {
+    font-size: 60px;
+    margin-bottom: 20px;
+  }
 
-    .subheading {
-        font-size: 11px;
-    }
+  .mouseHint {
+    top: 60%;
+  }
+
+  .mouseLabel {
+    display: none;
+  }
+
+  .mouseLabelMobile {
+    display: block;
+    font-family: 'PP Mori', sans-serif;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: #D2042D;
+    margin: 0;
+    opacity: 0.5;
+    text-align: center;
+  }
 }

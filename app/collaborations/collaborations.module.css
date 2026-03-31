@@ -1,46 +1,422 @@
 .container {
   width: 100%;
   min-height: 100vh;
-  background-color: white;
+  background-color: #fff;
 }
 
 .main {
-  padding: 60px 80px;
-  max-width: 1200px;
+  padding: 80px 80px 120px;
+  max-width: 1100px;
+}
+
+.hero {
+  margin-bottom: 64px;
+}
+
+.eyebrow {
+  font-family: 'PP Mori', sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #D2042D;
+  opacity: 0.5;
+  margin-bottom: 12px;
 }
 
 .heading {
   font-family: 'PP Neue Montreal Bold', sans-serif;
   font-weight: 800;
-  font-size: 49px;
+  font-size: 8vw;
+  line-height: 0.85;
   color: #D2042D;
-  margin-bottom: 40px;
-  line-height: 0.8;
+  margin: 0 0 28px;
 }
 
-.paragraph {
-  font-family: 'PP Neue Montreal', sans-serif;
+.heroDivider {
+  width: 48px;
+  height: 3px;
+  background: #D2042D;
+  border-radius: 2px;
+}
+
+.pitchSection {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items: start;
+  margin-bottom: 72px;
+}
+
+.pitchText {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.pitchLead {
+  font-family: 'PP Neue Montreal Bold', sans-serif;
   font-weight: 800;
-  font-size: 15px;
+  font-size: 20px;
+  color: #D2042D;
+  line-height: 1.35;
+  margin: 0;
+}
+
+.pitchBody {
+  font-family: 'PP Neue Montreal', sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  color: #D2042D;
+  line-height: 1.75;
+  margin: 0;
+  opacity: 0.8;
+}
+
+.highlight {
+  font-family: 'PP Neue Montreal Bold', sans-serif;
+  font-weight: 800;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  opacity: 1;
+}
+
+.ctaButton {
+  margin-top: 8px;
+  display: inline-block;
+  width: fit-content;
+  padding: 11px 24px;
+  background: #D2042D;
+  color: #fff;
+  font-family: 'PP Neue Montreal Bold', sans-serif;
+  font-weight: 800;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border-radius: 999px;
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+}
+
+.ctaButton:hover {
+  opacity: 0.82;
+}
+
+.statsGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+
+.statCard {
+  border: 1.5px solid rgba(210, 4, 45, 0.2);
+  border-radius: 16px;
+  padding: 24px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  transition: border-color 0.2s ease, background 0.2s ease;
+}
+
+.statCard:hover {
+  border-color: #D2042D;
+  background: #fdf0f2;
+}
+
+.statValue {
+  font-family: 'PP Neue Montreal Bold', sans-serif;
+  font-weight: 800;
+  font-size: 36px;
+  color: #D2042D;
+  line-height: 1;
+}
+
+.statLabel {
+  font-family: 'PP Mori', sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: #D2042D;
+  opacity: 0.55;
+}
+
+.tagsSection {
+  margin-bottom: 72px;
+}
+
+.sectionEyebrow {
+  font-family: 'PP Mori', sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #D2042D;
+  opacity: 0.5;
+  margin-bottom: 14px;
+}
+
+.tagRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.tag {
+  font-family: 'PP Neue Montreal Bold', sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+  color: #D2042D;
+  border: 1.5px solid #D2042D;
+  border-radius: 999px;
+  padding: 6px 16px;
+  transition: background 0.18s ease, color 0.18s ease;
+  cursor: default;
+}
+
+.tag:hover {
+  background: #D2042D;
+  color: #fff;
+}
+
+.collabSection {
+  margin-bottom: 72px;
+}
+
+.sectionTitle {
+  font-family: 'PP Neue Montreal Bold', sans-serif;
+  font-weight: 800;
+  font-size: 28px;
+  color: #D2042D;
+  margin: 6px 0 40px;
+}
+
+.collabList {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.collabCard {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  border: 1.5px solid rgba(210, 4, 45, 0.18);
+  border-radius: 20px;
+  overflow: hidden;
+  transition: border-color 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
+  transform: translateY(0) scale(1);
+  will-change: transform;
+}
+
+.collabCard:hover {
+  border-color: #D2042D;
+  transform: translateY(-1px) scale(1.01);
+  box-shadow: 0 10px 10px rgba(210, 4, 45, 0.1);
+}
+
+
+.collabImage {
+  position: relative;
+  min-height: 240px;
+}
+
+.collabImageOverlay {
+  position: absolute;
+  inset: 0;
+
+  z-index: 1;
+}
+
+.collabImageOverlay:hover {
+  opacity: 0.8;
+  background: transparent;
+  transition: opacity 3s ease-in;
+}
+
+
+
+.collabIndex {
+  position: absolute;
+  bottom: 16px;
+  left: 16px;
+  z-index: 2;
+  font-family: 'PP Neue Montreal Bold', sans-serif;
+  font-weight: 800;
+  font-size: 48px;
+  line-height: 1;
+  color: rgba(255, 255, 255, 0.35);
+  letter-spacing: -1px;
+}
+
+.collabContent {
+  padding: 28px 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  background: #fff;
+}
+
+.collabHeader {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.collabBrand {
+  font-family: 'PP Mori', sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #D2042D;
+  opacity: 0.5;
+  margin: 0;
+}
+
+.collabEvent {
+  font-family: 'PP Neue Montreal Bold', sans-serif;
+  font-weight: 800;
+  font-size: 20px;
+  color: #D2042D;
+  margin: 0;
+}
+
+.collabTags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+}
+
+.collabTag {
+  font-family: 'PP Mori', sans-serif;
+  font-size: 9px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: #D2042D;
+  background: #fdf0f2;
+  border-radius: 999px;
+  padding: 4px 12px;
+}
+
+.collabStats {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.collabStat {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-family: 'PP Neue Montreal', sans-serif;
+  font-size: 12px;
+  font-weight: 500;
   color: #D2042D;
   line-height: 1.6;
-  margin-bottom: 28px;
-  max-width: 75%;
+  opacity: 0.8;
+}
+
+.statDot {
+  flex-shrink: 0;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: #D2042D;
+  margin-top: 7px;
+  opacity: 0.5;
+}
+
+.ctaBanner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 28px 36px;
+  background: #D2042D;
+  border-radius: 20px;
+}
+
+.ctaBannerEyebrow {
+  font-family: 'PP Mori', sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: rgba(255, 255, 255, 0.6);
+  margin: 0 0 4px;
+}
+
+.ctaBannerTitle {
+  font-family: 'PP Neue Montreal Bold', sans-serif;
+  font-weight: 800;
+  font-size: 20px;
+  color: #fff;
+  margin: 0;
+}
+
+.ctaBannerLink {
+  font-family: 'PP Neue Montreal Bold', sans-serif;
+  font-weight: 800;
+  font-size: 13px;
+  color: #fff;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  white-space: nowrap;
+  transition: opacity 0.2s;
+}
+
+.ctaBannerLink:hover {
+  opacity: 0.7;
 }
 
 @media (max-width: 768px), (max-height: 768px) {
   .main {
-    padding: 40px 24px;
+    padding: 48px 24px 100px;
   }
 
   .heading {
-    font-size: 32px;
-    margin-bottom: 28px;
+    font-size: 60px;
   }
 
-  .paragraph {
-    font-size: 13px;
-     max-width: 100%;
-    line-height: 1.5;
+  .pitchSection {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .statsGrid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .collabCard {
+    grid-template-columns: 1fr;
+  }
+
+  .collabImage {
+    min-height: 180px;
+  }
+
+  .collabContent {
+    padding: 20px 20px 24px;
+  }
+
+  .ctaBanner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    padding: 24px;
+  }
+
+  .sectionTitle {
+    font-size: 22px;
+  }
+
+  .statValue {
+    font-size: 28px;
   }
 }

@@ -5,37 +5,248 @@
 }
 
 .main {
-  padding: 60px 80px;
-  max-width: 1200px;
+  padding: 80px 80px 120px;
+  max-width: 1100px;
+}
+
+.hero {
+  margin-bottom: 64px;
+}
+
+.eyebrow {
+  font-family: 'PP Mori', sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #D2042D;
+  opacity: 0.5;
+  margin-bottom: 12px;
 }
 
 .heading {
   font-family: 'PP Neue Montreal Bold', sans-serif;
   font-weight: 800;
-  font-size: 49px;
+  font-size: 8vw;
   color: #D2042D;
-  line-height: 0.8;
-  margin-bottom: 16px;
+  line-height: 0.85;
+  margin: 0 0 28px;
+}
+
+.heroDivider {
+  width: 8vw;
+  height: 3px;
+  background: #D2042D;
+  border-radius: 2px;
+  margin-bottom: 24px;
 }
 
 .subheading {
   font-family: 'PP Neue Montreal', sans-serif;
   font-size: 12px;
-  color: #000000;
-  letter-spacing: 0.02em;
+  font-weight: 500;
+  color: #D2042D;
+  line-height: 1.65;
+  opacity: 0.75;
+  max-width: 480px;
+}
+
+.cardList {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.eventCard {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  border: 1.5px solid rgba(210, 4, 45, 0.18);
+  border-radius: 20px;
+  overflow: hidden;
+  transition: border-color 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
+  transform: translateY(0) scale(1);
+  will-change: transform;
+}
+
+.eventCard:hover {
+  border-color: #D2042D;
+  transform: translateY(-6px) scale(1.01);
+  box-shadow: 0 10px 10px rgba(210, 4, 45, 0.1);
+}
+
+.imageWrap {
+  min-height: 240px;
+}
+
+.eventVideo {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: scale(1.34);
+}
+
+.imageInner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  min-height: 240px;
+}
+
+.imageInner.flipped {
+  transform: rotateY(180deg) !important;
+}
+
+.imageFront,
+.imageBack {
+  position: absolute;
+  inset: 0;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  border-radius: 0;
+}
+
+.imageFront {
+  overflow: hidden;
+}
+
+.imageFront img {
+  object-fit: cover;
+}
+
+.imageOverlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+
+.eventIndex {
+  position: absolute;
+  bottom: 16px;
+  left: 16px;
+  z-index: 2;
+  font-family: 'PP Neue Montreal Bold', sans-serif;
+  font-weight: 800;
+  font-size: 48px;
+  line-height: 1;
+  color: rgba(255, 255, 255, 0.35);
+  letter-spacing: -1px;
+  pointer-events: none;
+}
+
+.flipHint {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  z-index: 2;
+  font-family: 'PP Mori', sans-serif;
+  font-size: 9px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: rgba(255,255,255,0.7);
+  background: rgba(255, 0, 0, .85);
+  padding: 4px 10px;
+  border-radius: 999px;
+  pointer-events: none;
+}
+
+.imageBack {
+  background: #D2042D;
+  transform: rotateY(180deg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+
+.bioText {
+  font-family: 'PP Neue Montreal', sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  color: #fff;
+  line-height: 1.7;
+  margin: 0;
+}
+
+.eventContent {
+  padding: 28px 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: #fff;
+}
+
+.eventHeader {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.eventTag {
+  font-family: 'PP Mori', sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #D2042D;
+  opacity: 0.5;
+  margin: 0;
+}
+
+.eventTitle {
+  font-family: 'PP Neue Montreal Bold', sans-serif;
+  font-weight: 800;
+  font-size: 22px;
+  color: #D2042D;
+  margin: 0;
+}
+
+.eventHint {
+  font-family: 'PP Mori', sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: #D2042D;
+  opacity: 0.4;
+  margin: 0;
 }
 
 @media (max-width: 768px), (max-height: 768px) {
   .main {
-    padding: 40px 24px;
+    padding: 48px 24px 100px;
   }
 
   .heading {
-    font-size: 32px;
-    margin-bottom: 12px;
+    font-size: 60px;
+    margin-bottom: 20px;
   }
 
   .subheading {
     font-size: 11px;
+  }
+
+  .eventCard {
+    grid-template-columns: 1fr;
+  }
+
+  .imageWrap {
+    min-height: 200px;
+  }
+
+  .imageInner {
+    min-height: 200px;
+  }
+
+  .eventContent {
+    padding: 20px 20px 24px;
+    gap: 12px;
+  }
+
+  .eventTitle {
+    font-size: 18px;
   }
 }
