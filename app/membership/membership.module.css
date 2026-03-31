@@ -40,7 +40,6 @@
   border-radius: 2px;
 }
 
-/* ── Intro Card ── */
 .introCard {
   background: #fdf0f2;
   border-left: 3px solid #D2042D;
@@ -69,7 +68,6 @@
   text-underline-offset: 2px;
 }
 
-/* ── Two Column ── */
 .twoCol {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -163,19 +161,25 @@
   background: rgba(255,255,255,0.3);
 }
 
-.statusBadge {
-  margin-top: 18px;
+.statusBadge a {
+  margin-top: 20px;
   display: inline-block;
-  padding: 6px 14px;
+  padding: 16px 24px;
   border-radius: 999px;
-  background: rgba(255,255,255,0.15);
+  background: rgb(35, 35, 35);
   font-family: 'PP Mori', sans-serif;
-  font-size: 10px;
-  font-weight: 700;
+  font-size: 16px;
   text-transform: uppercase;
   letter-spacing: 1.5px;
-  color: rgba(255,255,255,0.85);
+  color: #ffffff;
   width: fit-content;
+}
+
+.statusBadge a:hover {
+  background: rgb(255, 255, 255);
+  color: #D2042D;
+  translate: 0 -4px;
+  transition: all 0.2s ease;
 }
 
 /* ── Sections ── */

@@ -65,7 +65,8 @@ export default function Membership() {
                 <span className={styles.pricingLabel}>Returning Members</span>
               </div>
             </div>
-            <div className={styles.statusBadge}>Applications Closed</div>
+            <div className={styles.statusBadge}><a href="/contact">Apply Now</a></div>
+            
           </div>
         </section>
 
