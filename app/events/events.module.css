@@ -66,6 +66,9 @@
   transition: border-color 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
   transform: translateY(0) scale(1);
   will-change: transform;
+  opacity: 0;
+  animation: cardFadeIn 0.5s ease forwards;
+  animation-delay: calc(var(--i) * 0.25s);
 }
 
 .eventCard:hover {
@@ -73,6 +76,18 @@
   transform: translateY(-6px) scale(1.01);
   box-shadow: 0 10px 10px rgba(210, 4, 45, 0.1);
 }
+
+@keyframes cardFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 
 .imageWrap {
   min-height: 240px;
@@ -137,6 +152,7 @@
 }
 
 .flipHint {
+  display: none;
   position: absolute;
   top: 14px;
   right: 14px;
@@ -215,6 +231,24 @@
   margin: 0;
 }
 
+.flipHintMobile {
+  display: none;
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  z-index: 2;
+  font-family: 'PP Mori', sans-serif;
+  font-size: 9px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: rgba(255,255,255,0.7);
+  background: rgba(255, 0, 0, .85);
+  padding: 4px 10px;
+  border-radius: 999px;
+  pointer-events: none;
+}
+
 @media (max-width: 768px), (max-height: 768px) {
   .main {
     padding: 48px 24px 100px;
@@ -245,7 +279,19 @@
     padding: 20px 20px 24px;
     gap: 12px;
   }
+  
+  .flipHint {
+    display: none;
+  }
+  
+  .flipHintMobile {
+    display: block;
+  }
 
+  .eventHint {
+    display: none;
+  }
+  
   .eventTitle {
     font-size: 18px;
   }

@@ -39,7 +39,7 @@ export default function Gallery() {
             <line x1="12" y1="6" x2="12" y2="10" />
           </svg>
           <p className={styles.mouseLabel}>move your mouse ;)</p>
-          <p className={styles.mouseLabelMobile}>ummm, so you lowkey need a mouse to see the gallery :|</p>
+          <p className={styles.mouseLabelMobile}>ummm, so you lowkey need a mouse to see the gallery :| #nophonegang</p>
         </div>
 
       </div>

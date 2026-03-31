@@ -116,7 +116,7 @@ export default function Collaborations() {
               We believe in <span className={styles.highlight}>low-cost, high-impact strategies</span> rooted
               in creativity, authenticity, and real connections.
             </p>
-            <a href="mailto:uscflavors@gmail.com" className={styles.ctaButton}>
+            <a href="/contact" className={styles.ctaButton}>
               Contact Us →
             </a>
           </div>
@@ -148,7 +148,11 @@ export default function Collaborations() {
 
           <div className={styles.collabList}>
             {collabs.map((c, i) => (
-              <div key={c.brand} className={styles.collabCard}>
+              <div 
+                key={c.brand}
+                className={styles.collabCard}
+                style={{ "--i": i } as React.CSSProperties}
+              >
                 <div className={styles.collabImage}>
                   <Image
                     src={c.image}

@@ -71,7 +71,10 @@ function EventCard({ event, index }: { event: typeof events[0]; index: number })
   }, []);
 
   return (
-    <div className={styles.eventCard}>
+    <div 
+      className={styles.eventCard}
+      style={{ "--i": index } as React.CSSProperties}
+    >
       {/* Image/Video pane — parallax + flip */}
       <div
         className={styles.imageWrap}
@@ -101,7 +104,8 @@ function EventCard({ event, index }: { event: typeof events[0]; index: number })
             )}
             <div className={styles.imageOverlay} />
             <span className={styles.eventIndex}>0{index + 1}</span>
-            {/*<span className={styles.flipHint}>Click to flip ↩</span>*/}
+            <span className={styles.flipHint}>Click to flip ↩</span>
+            <span className={styles.flipHintMobile}>Tap to flip ↩</span>  
           </div>
           {/* Back */}
           <div className={styles.imageBack}>

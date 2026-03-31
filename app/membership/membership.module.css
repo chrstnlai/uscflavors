@@ -168,7 +168,7 @@
   border-radius: 999px;
   background: rgb(35, 35, 35);
   font-family: 'PP Mori', sans-serif;
-  font-size: 16px;
+  font-size: 14px;
   text-transform: uppercase;
   letter-spacing: 1.5px;
   color: #ffffff;
@@ -293,7 +293,6 @@
   margin: 0;
 }
 
-/* ── Contact Banner ── */
 .contactBanner {
   margin-top: 16px;
   display: flex;
@@ -329,7 +328,6 @@
   opacity: 0.65;
 }
 
-/* ── Mobile ── */
 @media (max-width: 768px), (max-height: 768px) {
   .main {
     padding: 48px 24px 100px;
