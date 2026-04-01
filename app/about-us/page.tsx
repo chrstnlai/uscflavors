@@ -8,7 +8,6 @@ export default function AboutUs() {
         <main className={styles.main}>
           <p className={styles.eyebrow}>Who we are</p>
           <h1 className={styles.heading}>About Us</h1>
-          <div className={styles.heroDivider} />
           <p className={styles.paragraph}>
             Flavors is a cultural club dedicated to experiencing different cultures through taste, cuisine, and conversation. Food is not only a window into understanding culture but also an incredible way to build meaningful relationships. Our goal is to “break bread” with our peers, fostering connections through a shared enthusiasm for exploring diverse cuisines and cultures. Trying new foods can be an adventure—sometimes daunting but always exciting—and we aim to inspire open-mindedness in embracing these experiences.
           </p>

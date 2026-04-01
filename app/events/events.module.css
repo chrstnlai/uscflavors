@@ -6,7 +6,7 @@
 
 .main {
   padding: 80px 80px 120px;
-  max-width: 1100px;
+  max-width: 80%;
 }
 
 .hero {
@@ -27,7 +27,7 @@
 .heading {
   font-family: 'PP Neue Montreal Bold', sans-serif;
   font-weight: 800;
-  font-size: 8vw;
+  font-size: 5vw;
   color: #D2042D;
   line-height: 0.85;
   margin: 0 0 28px;
@@ -52,23 +52,23 @@
 }
 
 .cardList {
-  display: flex;
-  flex-direction: column;
+  margin-top: 10px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
   gap: 24px;
 }
 
 .eventCard {
   display: grid;
-  grid-template-columns: 300px 1fr;
+  grid-template-columns: 1fr;     
   border: 1.5px solid rgba(210, 4, 45, 0.18);
-  border-radius: 20px;
+  border-radius: 1px;
   overflow: hidden;
-  transition: border-color 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
-  transform: translateY(0) scale(1);
   will-change: transform;
   opacity: 0;
   animation: cardFadeIn 0.5s ease forwards;
   animation-delay: calc(var(--i) * 0.25s);
+  transition: border-color 0.25s ease, box-shadow 0.25s ease;
 }
 
 .eventCard:hover {
@@ -90,7 +90,15 @@
 
 
 .imageWrap {
-  min-height: 240px;
+  min-height: 300px; 
+}
+
+.imageInner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  min-height: 300px;
 }
 
 .eventVideo {
@@ -100,14 +108,6 @@
     height: 100%;
     object-fit: cover;
     transform: scale(1.34);
-}
-
-.imageInner {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  transform-style: preserve-3d;
-  min-height: 240px;
 }
 
 .imageInner.flipped {
@@ -144,15 +144,14 @@
   z-index: 2;
   font-family: 'PP Neue Montreal Bold', sans-serif;
   font-weight: 800;
-  font-size: 48px;
+  font-size: 64px;
   line-height: 1;
-  color: rgba(255, 255, 255, 0.35);
-  letter-spacing: -1px;
+  color: rgba(210, 4, 45, 0.85);
+  letter-spacing: -2px;
   pointer-events: none;
 }
 
 .flipHint {
-  display: none;
   position: absolute;
   top: 14px;
   right: 14px;
@@ -252,6 +251,7 @@
 @media (max-width: 768px), (max-height: 768px) {
   .main {
     padding: 48px 24px 100px;
+    max-width: 100%;
   }
 
   .heading {
@@ -261,6 +261,12 @@
 
   .subheading {
     font-size: 11px;
+  }
+
+  .cardList {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
   }
 
   .eventCard {

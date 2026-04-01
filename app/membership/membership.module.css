@@ -6,7 +6,7 @@
 
 .main {
   padding: 80px 80px 120px;
-  max-width: 960px;
+  max-width: 80%;
 }
 
 .hero {
@@ -27,7 +27,7 @@
 .heading {
   font-family: 'PP Neue Montreal Bold', sans-serif;
   font-weight: 800;
-  font-size: 8vw;
+  font-size: 5vw;
   line-height: 0.85;
   color: #D2042D;
   margin: 0 0 28px;
@@ -37,13 +37,12 @@
   width: 48px;
   height: 3px;
   background: #D2042D;
-  border-radius: 2px;
+  border-radius: 1px;
 }
 
 .introCard {
   background: #fdf0f2;
   border-left: 3px solid #D2042D;
-  border-radius: 0 12px 12px 0;
   padding: 28px 32px;
   margin-bottom: 48px;
 }
@@ -77,7 +76,7 @@
 
 .card {
   border: 1.5px solid #D2042D;
-  border-radius: 16px;
+  border-radius: 1px;
   padding: 28px 28px 32px;
   display: flex;
   flex-direction: column;
@@ -165,7 +164,7 @@
   margin-top: 20px;
   display: inline-block;
   padding: 16px 24px;
-  border-radius: 999px;
+  border-radius: 1px;
   background: rgb(35, 35, 35);
   font-family: 'PP Mori', sans-serif;
   font-size: 14px;
@@ -232,7 +231,7 @@
   letter-spacing: 0.5px;
   color: #D2042D;
   border: 1.5px solid #D2042D;
-  border-radius: 999px;
+  border-radius: 1px;
   padding: 7px 18px;
   transition: background 0.18s ease, color 0.18s ease;
   cursor: default;
@@ -252,7 +251,7 @@
 
 .valueCard {
   border: 1.5px solid rgba(210, 4, 45, 0.18);
-  border-radius: 14px;
+  border-radius: 1px;
   padding: 22px 24px;
   display: flex;
   flex-direction: column;
@@ -268,7 +267,7 @@
 .valueDot {
   width: 8px;
   height: 8px;
-  border-radius: 50%;
+  border-radius: 0%;
   background: #D2042D;
   margin-bottom: 4px;
 }
@@ -300,7 +299,7 @@
   gap: 16px;
   padding: 24px 32px;
   border: 1.5px solid #D2042D;
-  border-radius: 16px;
+  border-radius: 1px;
 }
 
 .contactText {

@@ -20,7 +20,6 @@ export default function Gallery() {
           <section className={styles.hero}>
             <p className={styles.eyebrow}>Faces of Flavors</p>
             <h1 className={styles.heading}>GALLERY</h1>
-            <div className={styles.heroDivider} />
           </section>
         </main>
 

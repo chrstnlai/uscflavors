@@ -27,7 +27,7 @@
 .heading {
   font-family: 'PP Neue Montreal Bold', sans-serif;
   font-weight: 800;
-  font-size: 8vw;
+  font-size: 5vw;
   color: #D2042D;
   line-height: 0.85;
   margin: 0 0 28px;
@@ -62,7 +62,7 @@
 
 .formCard {
   border: 1.5px solid #D2042D;
-  border-radius: 20px;
+  border-radius: 1px;
   overflow: hidden;
   width: 65vw;
   max-width: 800px;
@@ -177,7 +177,7 @@
   font-size: 13px;
   border: none;
   padding: 12px 32px;
-  border-radius: 999px;
+  border-radius: 1px;
   cursor: pointer;
   letter-spacing: 0.5px;
   text-transform: uppercase;
@@ -198,7 +198,7 @@
 .altCard {
   flex: 1;
   border: 1.5px solid rgba(210, 4, 45, 0.18);
-  border-radius: 16px;
+  border-radius: 1px;
   padding: 18px 20px;
   display: flex;
   flex-direction: column;

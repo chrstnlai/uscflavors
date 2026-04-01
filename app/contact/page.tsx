@@ -11,7 +11,6 @@ export default function Contact() {
         <section className={styles.hero}>
           <p className={styles.eyebrow}>Get In Touch</p>
           <h1 className={styles.heading}>ORDER HERE</h1>
-          <div className={styles.heroDivider} />
           <p className={styles.subheading}>
             For any questions or inquiries, reach out below or email us at{" "}
             <a className={styles.emailLink} href="mailto:uscflavors@gmail.com">

@@ -25,7 +25,6 @@ export default function Membership() {
         <section className={styles.hero}>
           <p className={styles.eyebrow}>Join the Feastivities</p>
           <h1 className={styles.heading}>MEMBERSHIP</h1>
-          <div className={styles.heroDivider} />
         </section>
 
         <section className={styles.introCard}>

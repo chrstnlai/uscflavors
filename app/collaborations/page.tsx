@@ -9,20 +9,13 @@ const stats = [
 ];
 
 const tags = [
-  "Brand Awareness",
-  "Event Activation",
-  "Product Engagement",
-  "Content Creation",
-  "Guerilla Marketing",
-  "Lead Generation",
-  "Community-Centric Campaigns",
-  "Top-of-Funnel Visibility",
+  "Brand Awareness", "Event Activation", "Product Engagement", "Content Creation",
+  "Guerilla Marketing", "Lead Generation", "Community-Centric Campaigns", "Top-of-Funnel Visibility",
 ];
 
 const collabs = [
   {
-    brand: "Rockstar Energy",
-    event: "Steak N Skate",
+    brand: "Rockstar Energy", event: "Steak N Skate",
     image: "/images/collaborations/1.avif",
     tags: ["Go-to-Market Strategy", "Earned Media", "Event Activation", "Guerilla Marketing"],
     stats: [
@@ -33,8 +26,7 @@ const collabs = [
     ],
   },
   {
-    brand: "Cerca Dating",
-    event: "Kiss N Tell — Valentine's Day Party",
+    brand: "Cerca Dating", event: "Kiss N Tell — Valentine's Day Party",
     image: "/images/collaborations/2.avif",
     tags: ["Go-to-Market Strategy", "Customer Acquisition", "Guerilla Marketing", "Innovative Brand Engagement"],
     stats: [
@@ -44,8 +36,7 @@ const collabs = [
     ],
   },
   {
-    brand: "The Living Room",
-    event: "Flavors Café Pop-Up",
+    brand: "The Living Room", event: "Flavors Café Pop-Up",
     image: "/images/collaborations/3.avif",
     tags: ["Experiential Retail", "Pop-Up Campaigns", "Event Marketing", "Brand Experience Design"],
     stats: [
@@ -55,8 +46,7 @@ const collabs = [
     ],
   },
   {
-    brand: "Din Tai Fung",
-    event: "Flavors Talks",
+    brand: "Din Tai Fung", event: "Flavors Talks",
     image: "/images/collaborations/4.avif",
     tags: ["Speaker Series", "Talent Acquisition", "Content Production", "Audience Engagement"],
     stats: [
@@ -66,8 +56,7 @@ const collabs = [
     ],
   },
   {
-    brand: "Messob, Hoy-Ka, Amphai, Simpang Asia, Road to Seoul",
-    event: "Meet to Eat",
+    brand: "Messob, Hoy-Ka, Amphai, Simpang Asia, Road to Seoul", event: "Meet to Eat",
     image: "/images/collaborations/5.avif",
     tags: ["Customer Acquisition", "Consumer Loyalty", "Community Engagement", "Promotional Campaigns"],
     stats: [
@@ -77,8 +66,7 @@ const collabs = [
     ],
   },
   {
-    brand: "NRG Esports",
-    event: "Intel Night Market + Monster Hunter Wilds Launch",
+    brand: "NRG Esports", event: "Intel Night Market + Monster Hunter Wilds Launch",
     image: "/images/collaborations/6.avif",
     tags: ["Strategic Partnerships", "Demand Generation", "Vendor Management", "Community Engagement"],
     stats: [
@@ -98,7 +86,6 @@ export default function Collaborations() {
         <section className={styles.hero}>
           <p className={styles.eyebrow}>WORK WITH US</p>
           <h1 className={styles.heading}>COLLABORATIONS</h1>
-          <div className={styles.heroDivider} />
         </section>
 
         {/* Pitch */}
@@ -116,11 +103,8 @@ export default function Collaborations() {
               We believe in <span className={styles.highlight}>low-cost, high-impact strategies</span> rooted
               in creativity, authenticity, and real connections.
             </p>
-            <a href="/contact" className={styles.ctaButton}>
-              Contact Us →
-            </a>
+            <a href="/contact" className={styles.ctaButton}>Contact Us →</a>
           </div>
-
           <div className={styles.statsGrid}>
             {stats.map(({ value, label }) => (
               <div key={label} className={styles.statCard}>
@@ -135,9 +119,7 @@ export default function Collaborations() {
         <section className={styles.tagsSection}>
           <p className={styles.sectionEyebrow}>What We Bring to the Table</p>
           <div className={styles.tagRow}>
-            {tags.map((t) => (
-              <span key={t} className={styles.tag}>{t}</span>
-            ))}
+            {tags.map((t) => <span key={t} className={styles.tag}>{t}</span>)}
           </div>
         </section>
 
@@ -148,34 +130,31 @@ export default function Collaborations() {
 
           <div className={styles.collabList}>
             {collabs.map((c, i) => (
-              <div 
+              <div
                 key={c.brand}
-                className={styles.collabCard}
+                className={styles.collabItem}
                 style={{ "--i": i } as React.CSSProperties}
               >
+                {/* Title — outside the card */}
+                <h3 className={styles.collabTitle}>
+                  <span className={styles.collabTitleBrand}>{c.brand}</span>
+                  <span className={styles.collabTitleSep}> — </span>
+                  <span className={styles.collabTitleEvent}>&ldquo;{c.event}&rdquo;</span>
+                </h3>
+
+                {/* Full-width image — outside the card */}
                 <div className={styles.collabImage}>
-                  <Image
-                    src={c.image}
-                    alt={c.event}
-                    fill
-                    style={{ objectFit: "cover" }}
-                  />
-                  <div className={styles.collabImageOverlay} />
+                  <Image src={c.image} alt={c.event} fill style={{ objectFit: "cover" }} />
                   <span className={styles.collabIndex}>0{i + 1}</span>
                 </div>
 
-                <div className={styles.collabContent}>
-                  <div className={styles.collabHeader}>
-                    <p className={styles.collabBrand}>{c.brand}</p>
-                    <h3 className={styles.collabEvent}>{c.event}</h3>
-                  </div>
-
+                {/* Card — only stats + tags */}
+                <div className={styles.collabCard}>
                   <div className={styles.collabTags}>
                     {c.tags.map((t) => (
                       <span key={t} className={styles.collabTag}>{t}</span>
                     ))}
                   </div>
-
                   <ul className={styles.collabStats}>
                     {c.stats.map((s) => (
                       <li key={s} className={styles.collabStat}>
@@ -196,9 +175,7 @@ export default function Collaborations() {
             <p className={styles.ctaBannerEyebrow}>Let's Cook Together</p>
             <p className={styles.ctaBannerTitle}>Shape the future of brand engagement.</p>
           </div>
-          <a href="/contact" className={styles.ctaBannerLink}>
-            Contact →
-          </a>
+          <a href="/contact" className={styles.ctaBannerLink}>Contact →</a>
         </section>
 
       </main>

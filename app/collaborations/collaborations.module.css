@@ -6,7 +6,7 @@
 
 .main {
   padding: 80px 80px 120px;
-  max-width: 1100px;
+  max-width: 80%;
 }
 
 .hero {
@@ -27,17 +27,10 @@
 .heading {
   font-family: 'PP Neue Montreal Bold', sans-serif;
   font-weight: 800;
-  font-size: 8vw;
+  font-size: 5vw;
   line-height: 0.85;
   color: #D2042D;
   margin: 0 0 28px;
-}
-
-.heroDivider {
-  width: 48px;
-  height: 3px;
-  background: #D2042D;
-  border-radius: 2px;
 }
 
 .pitchSection {
@@ -93,14 +86,12 @@
   font-size: 12px;
   text-transform: uppercase;
   letter-spacing: 1px;
-  border-radius: 999px;
+  border-radius: 1px;
   text-decoration: none;
   transition: opacity 0.2s ease;
 }
 
-.ctaButton:hover {
-  opacity: 0.82;
-}
+.ctaButton:hover { opacity: 0.82; }
 
 .statsGrid {
   display: grid;
@@ -110,7 +101,7 @@
 
 .statCard {
   border: 1.5px solid rgba(210, 4, 45, 0.2);
-  border-radius: 16px;
+  border-radius: 1px;
   padding: 24px 20px;
   display: flex;
   flex-direction: column;
@@ -141,9 +132,7 @@
   opacity: 0.55;
 }
 
-.tagsSection {
-  margin-bottom: 72px;
-}
+.tagsSection { margin-bottom: 72px; }
 
 .sectionEyebrow {
   font-family: 'PP Mori', sans-serif;
@@ -170,7 +159,7 @@
   letter-spacing: 0.4px;
   color: #D2042D;
   border: 1.5px solid #D2042D;
-  border-radius: 999px;
+  border-radius: 1px;
   padding: 6px 16px;
   transition: background 0.18s ease, color 0.18s ease;
   cursor: default;
@@ -181,9 +170,7 @@
   color: #fff;
 }
 
-.collabSection {
-  margin-bottom: 72px;
-}
+.collabSection { margin-bottom: 72px; }
 
 .sectionTitle {
   font-family: 'PP Neue Montreal Bold', sans-serif;
@@ -193,61 +180,56 @@
   margin: 6px 0 40px;
 }
 
+/* ── Per-item wrapper ── */
 .collabList {
   display: flex;
   flex-direction: column;
-  gap: 24px;
-}
-
-.collabCard {
-  display: grid;
-  grid-template-columns: 280px 1fr;
-  border: 1.5px solid rgba(210, 4, 45, 0.18);
-  border-radius: 20px;
-  overflow: hidden;
-  will-change: transform;
-
-  opacity: 0;
-  animation: cardFadeIn 0.5s ease forwards;
-  animation-delay: calc(var(--i) * .25s);
-
-  transition: border-color 0.25s ease, box-shadow 0.25s ease;
-}
-
-.collabCard:hover {
-  border-color: #D2042D;
-  transform: translateY(-1px) scale(1.01);
-  box-shadow: 0 10px 10px rgba(210, 4, 45, 0.1);
-}
-
-
-.collabImage {
-  position: relative;
-  min-height: 240px;
-}
-
-.collabImageOverlay {
-  position: absolute;
-  inset: 0;
-
-  z-index: 1;
-}
-
-.collabImageOverlay:hover {
-  opacity: 0.8;
-  background: transparent;
-  transition: opacity 3s ease-in;
+  gap: 64px;
 }
 
 @keyframes cardFadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.collabItem {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  opacity: 0;
+  animation: cardFadeIn 0.5s ease forwards;
+  animation-delay: calc(var(--i) * 0.2s);
+}
+
+/* Title above image */
+.collabTitle {
+  font-family: 'PP Neue Montreal Bold', sans-serif;
+  font-weight: 800;
+  font-size: 16px;
+  color: #D2042D;
+  margin: 0 0 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+}
+
+.collabTitleBrand {
+  font-weight: 800;
+}
+
+.collabTitleSep {
+  opacity: 0.4;
+}
+
+.collabTitleEvent {
+  font-family: 'PP Neue Montreal', sans-serif;
+  font-weight: 500;
+}
+
+.collabImage {
+  position: relative;
+  width: 100%;
+  height: 420px;
+  overflow: hidden;
 }
 
 .collabIndex {
@@ -257,43 +239,28 @@
   z-index: 2;
   font-family: 'PP Neue Montreal Bold', sans-serif;
   font-weight: 800;
-  font-size: 48px;
+  font-size: 64px;
   line-height: 1;
-  color: rgba(255, 255, 255, 0.35);
-  letter-spacing: -1px;
+  color: rgba(210, 4, 45, 0.85);
+  letter-spacing: -2px;
+  pointer-events: none;
 }
 
-.collabContent {
-  padding: 28px 32px;
+.collabCard {
+  border: 1.5px solid rgba(210, 4, 45, 0.18);
+  border-radius: 0;               
+  border-top: none;            
+  padding: 24px 28px;
   display: flex;
   flex-direction: column;
   gap: 16px;
   background: #fff;
+  transition: border-color 0.25s ease, box-shadow 0.25s ease;
 }
 
-.collabHeader {
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-}
-
-.collabBrand {
-  font-family: 'PP Mori', sans-serif;
-  font-size: 10px;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  color: #D2042D;
-  opacity: 0.5;
-  margin: 0;
-}
-
-.collabEvent {
-  font-family: 'PP Neue Montreal Bold', sans-serif;
-  font-weight: 800;
-  font-size: 20px;
-  color: #D2042D;
-  margin: 0;
+.collabCard:hover {
+  border-color: #D2042D;
+  box-shadow: 0 10px 10px rgba(210, 4, 45, 0.08);
 }
 
 .collabTags {
@@ -310,7 +277,7 @@
   letter-spacing: 0.5px;
   color: #D2042D;
   background: #fdf0f2;
-  border-radius: 999px;
+  border-radius: 1px;
   padding: 4px 12px;
 }
 
@@ -345,6 +312,7 @@
   opacity: 0.5;
 }
 
+/* ── CTA Banner ── */
 .ctaBanner {
   display: flex;
   align-items: center;
@@ -352,7 +320,7 @@
   gap: 24px;
   padding: 28px 36px;
   background: #D2042D;
-  border-radius: 20px;
+  border-radius: 0;
 }
 
 .ctaBannerEyebrow {
@@ -361,7 +329,7 @@
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 2px;
-  color: rgba(255, 255, 255, 0.6);
+  color: rgba(255,255,255,0.6);
   margin: 0 0 4px;
 }
 
@@ -384,49 +352,17 @@
   transition: opacity 0.2s;
 }
 
-.ctaBannerLink:hover {
-  opacity: 0.7;
-}
+.ctaBannerLink:hover { opacity: 0.7; }
 
+/* ── Mobile ── */
 @media (max-width: 768px), (max-height: 768px) {
-  .main {
-    padding: 48px 24px 100px;
-  }
-
-  .heading {
-    font-size: 60px;
-  }
-
-  .pitchSection {
-    grid-template-columns: 1fr;
-    gap: 32px;
-  }
-
-  .statsGrid {
-    grid-template-columns: 1fr 1fr;
-  }
-
-
-  .collabImage {
-    min-height: 180px;
-  }
-
-  .collabContent {
-    padding: 20px 20px 24px;
-  }
-
-  .ctaBanner {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 16px;
-    padding: 24px;
-  }
-
-  .sectionTitle {
-    font-size: 22px;
-  }
-
-  .statValue {
-    font-size: 28px;
-  }
+  .main { padding: 48px 24px 100px; }
+  .heading { font-size: 60px; }
+  .pitchSection { grid-template-columns: 1fr; gap: 32px; }
+  .statsGrid { grid-template-columns: 1fr 1fr; }
+  .collabImage { height: 240px; }
+  .collabTitle { font-size: 13px; }
+  .ctaBanner { flex-direction: column; align-items: flex-start; gap: 16px; padding: 24px; }
+  .sectionTitle { font-size: 22px; }
+  .statValue { font-size: 28px; }
 }

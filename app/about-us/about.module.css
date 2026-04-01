@@ -6,7 +6,7 @@
 
 .main {
   padding: 80px 80px 120px;
-  max-width: 1200px;
+  max-width: 100%;
 }
 
 .eyebrow {
@@ -23,9 +23,9 @@
 .heading {
   font-family: 'PP Neue Montreal Bold', sans-serif;
   font-weight: 800;
-  font-size: 8vw;
+  font-size: 5vw;
   color: #D2042D;
-  margin: 0 0 28px;
+  margin: 0 0 45px;
   text-transform: uppercase;
   line-height: 0.85;
 }
@@ -39,10 +39,11 @@
 }
 
 .paragraph {
-  font-family: 'PP Neue Montreal', sans-serif;
+  font-family: 'PP Neue Montreal Bold', sans-serif;
   font-weight: 500;
   font-size: 13px;
   color: #D2042D;
+  text-transform: uppercase;
   line-height: 1.75;
   margin-bottom: 14px;
   max-width: 75%;

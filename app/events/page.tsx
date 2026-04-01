@@ -120,9 +120,6 @@ function EventCard({ event, index }: { event: typeof events[0]; index: number })
           <p className={styles.eventTag}>{event.tag}</p>
           <h3 className={styles.eventTitle}>{event.title}</h3>
         </div>
-        <p className={styles.eventHint}>
-          {flipped ? "..." : "← Click to to learn more"}
-        </p>
       </div>
     </div>
   );
@@ -135,7 +132,6 @@ export default function Events() {
         <section className={styles.hero}>
           <p className={styles.eyebrow}>What We're Cookin'</p>
           <h1 className={styles.heading}>EVENTS</h1>
-          <div className={styles.heroDivider} />
           <p className={styles.subheading}>
             Thoughtfully curated events built around food, culture, and community.
           </p>
