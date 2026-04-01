@@ -4,12 +4,12 @@
     right: 0;
     height: 100vh;
     width: 200px;
-    padding: 10px 50px;
+    padding: 15px 50px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: flex-end;
-    background: white;
+    background: transparent;
     z-index: 1000;
     pointer-events: all;
     animation: navFadeIn 2s ease;

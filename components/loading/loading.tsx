@@ -58,7 +58,7 @@ export default function LoadingScreen() {
 
       <div className="loading-text">
         <p>savor the moment</p>
-        <p>a usc club</p>
+        <p>usc flavors</p>
       </div>
     </div>
   );
