@@ -1,5 +1,6 @@
 import styles from "./about.module.css";
 import Image from "next/image";
+import Footer from "../../components/footer/footer";
 
 export default function AboutUs() {
   return (
@@ -24,6 +25,7 @@ export default function AboutUs() {
               priority
             />
           </div>
+          <Footer />
         </main>
       </div>
     </>

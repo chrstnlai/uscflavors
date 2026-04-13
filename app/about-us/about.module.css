@@ -1,5 +1,5 @@
 .container {
-  width: 100%;
+  width: 85%;
   min-height: 100vh;
   background-color: white;
 }
@@ -22,7 +22,6 @@
 
 .heading {
   font-family: 'PP Neue Montreal Bold', sans-serif;
-  font-weight: 800;
   font-size: 5vw;
   color: #D2042D;
   margin: 0 0 45px;
@@ -40,13 +39,11 @@
 
 .paragraph {
   font-family: 'PP Neue Montreal Bold', sans-serif;
-  font-weight: 500;
-  font-size: 13px;
+  font-size: 15px;
   color: #D2042D;
   text-transform: uppercase;
   line-height: 1.75;
   margin-bottom: 14px;
-  max-width: 75%;
   opacity: 0.85;
 }
 
@@ -58,7 +55,6 @@
 }
 
 .image {
-  max-width: 100%;
   height: auto;
   object-fit: contain;
 }

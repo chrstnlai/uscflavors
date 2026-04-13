@@ -5,7 +5,7 @@ const stats = [
   { value: "650+", label: "Product Cans Distributed" },
   { value: "60K+", label: "Unique Impressions" },
   { value: "2,000+", label: "Event Attendees Reached" },
-  { value: "$1K+", label: "Revenue Generated for Partners" },
+  { value: "$8K+", label: "Revenue Generated for Partners" },
 ];
 
 const tags = [

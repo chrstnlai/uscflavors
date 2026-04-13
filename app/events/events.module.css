@@ -1,12 +1,12 @@
 .container {
-  width: 100%;
+  width: 85%;
   min-height: 100vh;
   background-color: white;
 }
 
 .main {
   padding: 80px 80px 120px;
-  max-width: 80%;
+  max-width: 100%;
 }
 
 .hero {
@@ -48,7 +48,6 @@
   color: #D2042D;
   line-height: 1.65;
   opacity: 0.75;
-  max-width: 480px;
 }
 
 .cardList {
@@ -138,6 +137,7 @@
 }
 
 .eventIndex {
+  display: none;
   position: absolute;
   bottom: 16px;
   left: 16px;

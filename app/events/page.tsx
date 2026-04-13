@@ -104,7 +104,6 @@ function EventCard({ event, index }: { event: typeof events[0]; index: number })
             )}
             <div className={styles.imageOverlay} />
             <span className={styles.eventIndex}>0{index + 1}</span>
-            <span className={styles.flipHint}>Click to flip ↩</span>
             <span className={styles.flipHintMobile}>Tap to flip ↩</span>  
           </div>
           {/* Back */}
@@ -133,7 +132,7 @@ export default function Events() {
           <p className={styles.eyebrow}>What We're Cookin'</p>
           <h1 className={styles.heading}>EVENTS</h1>
           <p className={styles.subheading}>
-            Thoughtfully curated events built around food, culture, and community.
+            Thoughtfully curated events built around food, culture, and community. Click an event to learn more.
           </p>
         </section>
 

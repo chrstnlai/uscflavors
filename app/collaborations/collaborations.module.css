@@ -1,12 +1,12 @@
 .container {
-  width: 100%;
+  width: 85%;
   min-height: 100vh;
   background-color: #fff;
 }
 
 .main {
   padding: 80px 80px 120px;
-  max-width: 80%;
+  max-width: 100%;
 }
 
 .hero {
@@ -58,7 +58,7 @@
 
 .pitchBody {
   font-family: 'PP Neue Montreal', sans-serif;
-  font-size: 13px;
+  font-size: 15px;
   font-weight: 500;
   color: #D2042D;
   line-height: 1.75;
@@ -83,7 +83,7 @@
   color: #fff;
   font-family: 'PP Neue Montreal Bold', sans-serif;
   font-weight: 800;
-  font-size: 12px;
+  font-size: 15px;
   text-transform: uppercase;
   letter-spacing: 1px;
   border-radius: 1px;
@@ -153,7 +153,7 @@
 
 .tag {
   font-family: 'PP Neue Montreal Bold', sans-serif;
-  font-size: 11px;
+  font-size: 12px;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.4px;
@@ -271,7 +271,7 @@
 
 .collabTag {
   font-family: 'PP Mori', sans-serif;
-  font-size: 9px;
+  font-size: 12px;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.5px;
@@ -295,7 +295,7 @@
   align-items: flex-start;
   gap: 10px;
   font-family: 'PP Neue Montreal', sans-serif;
-  font-size: 12px;
+  font-size: 15px;
   font-weight: 500;
   color: #D2042D;
   line-height: 1.6;
@@ -344,7 +344,7 @@
 .ctaBannerLink {
   font-family: 'PP Neue Montreal Bold', sans-serif;
   font-weight: 800;
-  font-size: 13px;
+  font-size: 15px;
   color: #fff;
   text-decoration: underline;
   text-underline-offset: 3px;

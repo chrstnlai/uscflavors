@@ -1,12 +1,12 @@
 .container {
-  width: 100%;
+  width: 85%;
   min-height: 100vh;
   background-color: #fff;
 }
 
 .main {
   padding: 80px 80px 120px;
-  max-width: 80%;
+  max-width: 100%;
 }
 
 .hero {
@@ -49,7 +49,7 @@
 
 .introText {
   font-family: 'PP Neue Montreal', sans-serif;
-  font-size: 13px;
+  font-size: 15px;
   font-weight: 500;
   color: #D2042D;
   line-height: 1.75;
@@ -89,7 +89,7 @@
 
 .cardTag {
   font-family: 'PP Mori', sans-serif;
-  font-size: 10px;
+  font-size: 12px;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 2px;
@@ -105,7 +105,7 @@
 .cardTitle {
   font-family: 'PP Neue Montreal Bold', sans-serif;
   font-weight: 800;
-  font-size: 22px;
+  font-size: 24px;
   color: #D2042D;
   margin: 0;
 }
@@ -116,7 +116,7 @@
 
 .cardBody {
   font-family: 'PP Neue Montreal', sans-serif;
-  font-size: 13px;
+  font-size: 15px;
   font-weight: 500;
   color: #D2042D;
   line-height: 1.65;
@@ -147,7 +147,7 @@
 
 .pricingLabel {
   font-family: 'PP Mori', sans-serif;
-  font-size: 10px;
+  font-size: 12px;
   text-transform: uppercase;
   letter-spacing: 1px;
   color: rgba(255,255,255,0.7);
@@ -167,7 +167,7 @@
   border-radius: 1px;
   background: rgb(35, 35, 35);
   font-family: 'PP Mori', sans-serif;
-  font-size: 14px;
+  font-size: 16px;
   text-transform: uppercase;
   letter-spacing: 1.5px;
   color: #ffffff;
@@ -200,14 +200,14 @@
 .sectionTitle {
   font-family: 'PP Neue Montreal Bold', sans-serif;
   font-weight: 800;
-  font-size: 28px;
+  font-size: 24px;
   color: #D2042D;
   margin: 0 0 14px;
 }
 
 .sectionDesc {
   font-family: 'PP Neue Montreal', sans-serif;
-  font-size: 13px;
+  font-size: 15px;
   font-weight: 500;
   color: #D2042D;
   line-height: 1.7;
@@ -226,7 +226,7 @@
 .eventChip {
   font-family: 'PP Neue Montreal Bold', sans-serif;
   font-weight: 700;
-  font-size: 12px;
+  font-size: 15px;
   text-transform: uppercase;
   letter-spacing: 0.5px;
   color: #D2042D;
@@ -275,7 +275,7 @@
 .valueLabel {
   font-family: 'PP Neue Montreal Bold', sans-serif;
   font-weight: 800;
-  font-size: 13px;
+  font-size: 15px;
   color: #D2042D;
   margin: 0;
   text-transform: uppercase;
@@ -284,7 +284,7 @@
 
 .valueDesc {
   font-family: 'PP Neue Montreal', sans-serif;
-  font-size: 12px;
+  font-size: 15px;
   font-weight: 500;
   color: #D2042D;
   line-height: 1.6;
@@ -305,7 +305,7 @@
 .contactText {
   font-family: 'PP Neue Montreal Bold', sans-serif;
   font-weight: 800;
-  font-size: 14px;
+  font-size: 15px;
   color: #D2042D;
   margin: 0;
   text-transform: uppercase;
@@ -315,7 +315,7 @@
 
 .contactLink {
   font-family: 'PP Neue Montreal', sans-serif;
-  font-size: 13px;
+  font-size: 15px;
   font-weight: 600;
   color: #D2042D;
   text-decoration: underline;

@@ -1,6 +1,6 @@
 .container {
   position: relative;
-  width: 100%;
+  width: 85%;
   background-color: transparent;
   pointer-events: none;
 }
@@ -9,7 +9,6 @@
   position: relative;
   z-index: 3; 
   padding: 80px 80px 0;
-  width: 100%;
   max-width: 100%;
   pointer-events: auto;
   background-color: white;
