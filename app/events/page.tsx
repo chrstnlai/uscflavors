@@ -1,7 +1,7 @@
 "use client";
 import styles from "./events.module.css";
 import Image from "next/image";
-import { useState, useRef, useCallback } from "react";
+import { useState, useRef, useCallback, CSSProperties } from "react";
 
 const events = [
   {
@@ -46,7 +46,13 @@ const events = [
   },
 ];
 
-function EventCard({ event, index }: { event: typeof events[0]; index: number }) {
+function EventCard({
+  event,
+  index,
+}: {
+  event: (typeof events)[0];
+  index: number;
+}) {
   const [flipped, setFlipped] = useState(false);
   const cardRef = useRef<HTMLDivElement>(null);
   const isVideo = event.src.endsWith(".mp4");
@@ -62,7 +68,7 @@ function EventCard({ event, index }: { event: typeof events[0]; index: number })
       const factor = event.depth / 10;
       cardRef.current.style.transform = `rotateY(${dx * factor}deg) rotateX(${-dy * factor}deg)`;
     },
-    [flipped, event.depth]
+    [flipped, event.depth],
   );
 
   const handleMouseLeave = useCallback(() => {
@@ -71,10 +77,7 @@ function EventCard({ event, index }: { event: typeof events[0]; index: number })
   }, []);
 
   return (
-    <div 
-      className={styles.eventCard}
-      style={{ "--i": index } as React.CSSProperties}
-    >
+    <div className={styles.eventCard} style={{ "--i": index } as CSSProperties}>
       {/* Image/Video pane — parallax + flip */}
       <div
         className={styles.imageWrap}
@@ -86,7 +89,11 @@ function EventCard({ event, index }: { event: typeof events[0]; index: number })
         <div
           ref={cardRef}
           className={`${styles.imageInner} ${flipped ? styles.flipped : ""}`}
-          style={{ transition: flipped ? "transform 0.6s ease" : "transform 0.12s ease" }}
+          style={{
+            transition: flipped
+              ? "transform 0.6s ease"
+              : "transform 0.12s ease",
+          }}
         >
           {/* Front */}
           <div className={styles.imageFront}>
@@ -100,11 +107,16 @@ function EventCard({ event, index }: { event: typeof events[0]; index: number })
                 className={styles.eventVideo}
               />
             ) : (
-              <Image src={event.src} alt={event.alt} fill style={{ objectFit: "cover" }} />
+              <Image
+                src={event.src}
+                alt={event.alt}
+                fill
+                style={{ objectFit: "cover" }}
+              />
             )}
             <div className={styles.imageOverlay} />
             <span className={styles.eventIndex}>0{index + 1}</span>
-            <span className={styles.flipHintMobile}>Tap to flip ↩</span>  
+            <span className={styles.flipHintMobile}>Tap to flip ↩</span>
           </div>
           {/* Back */}
           <div className={styles.imageBack}>
@@ -132,7 +144,8 @@ export default function Events() {
           <p className={styles.eyebrow}>What We're Cookin'</p>
           <h1 className={styles.heading}>EVENTS</h1>
           <p className={styles.subheading}>
-            Thoughtfully curated events built around food, culture, and community. Click an event to learn more.
+            Thoughtfully curated events built around food, culture, and
+            community. Click an event to learn more.
           </p>
         </section>
 

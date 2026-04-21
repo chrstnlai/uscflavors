@@ -1,3 +1,4 @@
+import { CSSProperties } from "react";
 import styles from "./collaborations.module.css";
 import Image from "next/image";
 
@@ -9,15 +10,27 @@ const stats = [
 ];
 
 const tags = [
-  "Brand Awareness", "Event Activation", "Product Engagement", "Content Creation",
-  "Guerilla Marketing", "Lead Generation", "Community-Centric Campaigns", "Top-of-Funnel Visibility",
+  "Brand Awareness",
+  "Event Activation",
+  "Product Engagement",
+  "Content Creation",
+  "Guerilla Marketing",
+  "Lead Generation",
+  "Community-Centric Campaigns",
+  "Top-of-Funnel Visibility",
 ];
 
 const collabs = [
   {
-    brand: "Rockstar Energy", event: "Steak N Skate",
+    brand: "Rockstar Energy",
+    event: "Steak N Skate",
     image: "/images/collaborations/1.avif",
-    tags: ["Go-to-Market Strategy", "Earned Media", "Event Activation", "Guerilla Marketing"],
+    tags: [
+      "Go-to-Market Strategy",
+      "Earned Media",
+      "Event Activation",
+      "Guerilla Marketing",
+    ],
     stats: [
       "Distributed 650+ product cans to a high-value, hard-to-reach audience of skateboarders.",
       "Generated 60K+ unique impressions through event-based content.",
@@ -26,9 +39,15 @@ const collabs = [
     ],
   },
   {
-    brand: "Cerca Dating", event: "Kiss N Tell — Valentine's Day Party",
+    brand: "Cerca Dating",
+    event: "Kiss N Tell — Valentine's Day Party",
     image: "/images/collaborations/2.avif",
-    tags: ["Go-to-Market Strategy", "Customer Acquisition", "Guerilla Marketing", "Innovative Brand Engagement"],
+    tags: [
+      "Go-to-Market Strategy",
+      "Customer Acquisition",
+      "Guerilla Marketing",
+      "Innovative Brand Engagement",
+    ],
     stats: [
       "Integrated Cerca into a campus party activation — 75+ downloads and 50+ sign-ups at ≈$1.50 CAC.",
       "Drove 25K+ impressions via an all-expenses-paid date giveaway and experiential content.",
@@ -36,9 +55,15 @@ const collabs = [
     ],
   },
   {
-    brand: "The Living Room", event: "Flavors Café Pop-Up",
+    brand: "The Living Room",
+    event: "Flavors Café Pop-Up",
     image: "/images/collaborations/3.avif",
-    tags: ["Experiential Retail", "Pop-Up Campaigns", "Event Marketing", "Brand Experience Design"],
+    tags: [
+      "Experiential Retail",
+      "Pop-Up Campaigns",
+      "Event Marketing",
+      "Brand Experience Design",
+    ],
     stats: [
       "Co-hosted an outdoor pop-up café with live music and specialty drinks.",
       "Drove $500+ in revenue for a local business in just three hours.",
@@ -46,9 +71,15 @@ const collabs = [
     ],
   },
   {
-    brand: "Din Tai Fung", event: "Flavors Talks",
+    brand: "Din Tai Fung",
+    event: "Flavors Talks",
     image: "/images/collaborations/4.avif",
-    tags: ["Speaker Series", "Talent Acquisition", "Content Production", "Audience Engagement"],
+    tags: [
+      "Speaker Series",
+      "Talent Acquisition",
+      "Content Production",
+      "Audience Engagement",
+    ],
     stats: [
       "Hosted a speaker event with DTF's corporate chef and head recruiter — 75+ attendees, 10 job applications.",
       "Partnered with 5 cultural student orgs at USC to amplify reach.",
@@ -56,9 +87,15 @@ const collabs = [
     ],
   },
   {
-    brand: "Messob, Hoy-Ka, Amphai, Simpang Asia, Road to Seoul", event: "Meet to Eat",
+    brand: "Messob, Hoy-Ka, Amphai, Simpang Asia, Road to Seoul",
+    event: "Meet to Eat",
     image: "/images/collaborations/5.avif",
-    tags: ["Customer Acquisition", "Consumer Loyalty", "Community Engagement", "Promotional Campaigns"],
+    tags: [
+      "Customer Acquisition",
+      "Consumer Loyalty",
+      "Community Engagement",
+      "Promotional Campaigns",
+    ],
     stats: [
       "Generated $1,000+ in revenue for local restaurant partners.",
       "Orchestrated a one-day dining event driving 100 cohort members across multiple restaurants.",
@@ -66,9 +103,15 @@ const collabs = [
     ],
   },
   {
-    brand: "NRG Esports", event: "Intel Night Market + Monster Hunter Wilds Launch",
+    brand: "NRG Esports",
+    event: "Intel Night Market + Monster Hunter Wilds Launch",
     image: "/images/collaborations/6.avif",
-    tags: ["Strategic Partnerships", "Demand Generation", "Vendor Management", "Community Engagement"],
+    tags: [
+      "Strategic Partnerships",
+      "Demand Generation",
+      "Vendor Management",
+      "Community Engagement",
+    ],
     stats: [
       "Helped conceptualize and execute the food experience for a 2,000+ person NRG x Monster Hunter event.",
       "Drove 100 members to Intel's NRG collaboration and night market.",
@@ -81,7 +124,6 @@ export default function Collaborations() {
   return (
     <div className={styles.container}>
       <main className={styles.main}>
-
         {/* Hero */}
         <section className={styles.hero}>
           <p className={styles.eyebrow}>WORK WITH US</p>
@@ -92,18 +134,26 @@ export default function Collaborations() {
         <section className={styles.pitchSection}>
           <div className={styles.pitchText}>
             <p className={styles.pitchLead}>
-              We don't just connect brands with college students — we serve up a world of culture.
+              We don't just connect brands with college students — we serve up a
+              world of culture.
             </p>
             <p className={styles.pitchBody}>
-              We're your gateway to the trendsetters, tastemakers, and loyal customers of tomorrow.
-              From bold promotional campaigns to freelance creative solutions and lead generation,
-              we bring targeted engagement directly to you — and we make sure it's anything but typical.
+              We're your gateway to the trendsetters, tastemakers, and loyal
+              customers of tomorrow. From bold promotional campaigns to
+              freelance creative solutions and lead generation, we bring
+              targeted engagement directly to you — and we make sure it's
+              anything but typical.
             </p>
             <p className={styles.pitchBody}>
-              We believe in <span className={styles.highlight}>low-cost, high-impact strategies</span> rooted
-              in creativity, authenticity, and real connections.
+              We believe in{" "}
+              <span className={styles.highlight}>
+                low-cost, high-impact strategies
+              </span>{" "}
+              rooted in creativity, authenticity, and real connections.
             </p>
-            <a href="/contact" className={styles.ctaButton}>Contact Us →</a>
+            <a href="/contact" className={styles.ctaButton}>
+              Contact Us →
+            </a>
           </div>
           <div className={styles.statsGrid}>
             {stats.map(({ value, label }) => (
@@ -119,7 +169,11 @@ export default function Collaborations() {
         <section className={styles.tagsSection}>
           <p className={styles.sectionEyebrow}>What We Bring to the Table</p>
           <div className={styles.tagRow}>
-            {tags.map((t) => <span key={t} className={styles.tag}>{t}</span>)}
+            {tags.map((t) => (
+              <span key={t} className={styles.tag}>
+                {t}
+              </span>
+            ))}
           </div>
         </section>
 
@@ -133,18 +187,25 @@ export default function Collaborations() {
               <div
                 key={c.brand}
                 className={styles.collabItem}
-                style={{ "--i": i } as React.CSSProperties}
+                style={{ "--i": i } as CSSProperties}
               >
                 {/* Title — outside the card */}
                 <h3 className={styles.collabTitle}>
                   <span className={styles.collabTitleBrand}>{c.brand}</span>
                   <span className={styles.collabTitleSep}> — </span>
-                  <span className={styles.collabTitleEvent}>&ldquo;{c.event}&rdquo;</span>
+                  <span className={styles.collabTitleEvent}>
+                    &ldquo;{c.event}&rdquo;
+                  </span>
                 </h3>
 
                 {/* Full-width image — outside the card */}
                 <div className={styles.collabImage}>
-                  <Image src={c.image} alt={c.event} fill style={{ objectFit: "cover" }} />
+                  <Image
+                    src={c.image}
+                    alt={c.event}
+                    fill
+                    style={{ objectFit: "cover" }}
+                  />
                   <span className={styles.collabIndex}>0{i + 1}</span>
                 </div>
 
@@ -152,7 +213,9 @@ export default function Collaborations() {
                 <div className={styles.collabCard}>
                   <div className={styles.collabTags}>
                     {c.tags.map((t) => (
-                      <span key={t} className={styles.collabTag}>{t}</span>
+                      <span key={t} className={styles.collabTag}>
+                        {t}
+                      </span>
                     ))}
                   </div>
                   <ul className={styles.collabStats}>
@@ -173,11 +236,14 @@ export default function Collaborations() {
         <section className={styles.ctaBanner}>
           <div>
             <p className={styles.ctaBannerEyebrow}>Let's Cook Together</p>
-            <p className={styles.ctaBannerTitle}>Shape the future of brand engagement.</p>
+            <p className={styles.ctaBannerTitle}>
+              Shape the future of brand engagement.
+            </p>
           </div>
-          <a href="/contact" className={styles.ctaBannerLink}>Contact →</a>
+          <a href="/contact" className={styles.ctaBannerLink}>
+            Contact →
+          </a>
         </section>
-
       </main>
     </div>
   );
