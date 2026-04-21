@@ -40,7 +40,7 @@ const collabs = [
   },
   {
     brand: "Cerca Dating",
-    event: "Kiss N Tell — Valentine's Day Party",
+    event: "Kiss N Tell — Valentine&apos;s Day Party",
     image: "/images/collaborations/2.avif",
     tags: [
       "Go-to-Market Strategy",
@@ -81,9 +81,9 @@ const collabs = [
       "Audience Engagement",
     ],
     stats: [
-      "Hosted a speaker event with DTF's corporate chef and head recruiter — 75+ attendees, 10 job applications.",
+      "Hosted a speaker event with DTF&apos;s corporate chef and head recruiter — 75+ attendees, 10 job applications.",
       "Partnered with 5 cultural student orgs at USC to amplify reach.",
-      "Generated 20K+ views on curated event content for DTF's career initiative.",
+      "Generated 20K+ views on curated event content for DTF&apos;s career initiative.",
     ],
   },
   {
@@ -114,8 +114,8 @@ const collabs = [
     ],
     stats: [
       "Helped conceptualize and execute the food experience for a 2,000+ person NRG x Monster Hunter event.",
-      "Drove 100 members to Intel's NRG collaboration and night market.",
-      "Supported promotion and launch of Intel's new hardware through community activation.",
+      "Drove 100 members to Intel&apos;s NRG collaboration and night market.",
+      "Supported promotion and launch of Intel&apos;s new hardware through community activation.",
     ],
   },
 ];
@@ -134,14 +134,14 @@ export default function Collaborations() {
         <section className={styles.pitchSection}>
           <div className={styles.pitchText}>
             <p className={styles.pitchLead}>
-              We don't just connect brands with college students — we serve up a
-              world of culture.
+              We don&apos;t just connect brands with college students — we serve
+              up a world of culture.
             </p>
             <p className={styles.pitchBody}>
-              We're your gateway to the trendsetters, tastemakers, and loyal
-              customers of tomorrow. From bold promotional campaigns to
+              We&apos;re your gateway to the trendsetters, tastemakers, and
+              loyal customers of tomorrow. From bold promotional campaigns to
               freelance creative solutions and lead generation, we bring
-              targeted engagement directly to you — and we make sure it's
+              targeted engagement directly to you — and we make sure it&apos;s
               anything but typical.
             </p>
             <p className={styles.pitchBody}>
@@ -235,7 +235,7 @@ export default function Collaborations() {
         {/* CTA Banner */}
         <section className={styles.ctaBanner}>
           <div>
-            <p className={styles.ctaBannerEyebrow}>Let's Cook Together</p>
+            <p className={styles.ctaBannerEyebrow}>Let&apos;s Cook Together</p>
             <p className={styles.ctaBannerTitle}>
               Shape the future of brand engagement.
             </p>

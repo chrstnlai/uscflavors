@@ -10,7 +10,7 @@ const events = [
     title: "Flavors @ Night",
     tag: "Semesterly",
     depth: 28,
-    bio: "Experience LA's food scene on the move with Flavors @ Night on our semesterly party bus food crawl! This event takes you on a curated tour featuring five diverse food stops across the city. Enjoy music, great vibes, and a series of local flavors as you hop from one venue to the next. It's a moving celebration of culinary diversity designed to keep the night exciting and engaging as you dance it away.",
+    bio: "Experience LA&apos;s food scene on the move with Flavors @ Night on our semesterly party bus food crawl! This event takes you on a curated tour featuring five diverse food stops across the city. Enjoy music, great vibes, and a series of local flavors as you hop from one venue to the next. It&apos;s a moving celebration of culinary diversity designed to keep the night exciting and engaging as you dance it away.",
   },
   {
     src: "/images/events/2.mp4",
@@ -26,7 +26,7 @@ const events = [
     title: "Cultural Potluck",
     tag: "Community",
     depth: 24,
-    bio: "Discover a new world of flavors at Cultural Potluck. Pick an ethnic cuisine you've been curious about with your family, prepare a dish that reflects your culinary adventure, and share it with a welcoming community of food enthusiasts. This event is all about exploring fresh tastes, exchanging ideas, and building connections through the universal language of food.",
+    bio: "Discover a new world of flavors at Cultural Potluck. Pick an ethnic cuisine you&apos;ve been curious about with your family, prepare a dish that reflects your culinary adventure, and share it with a welcoming community of food enthusiasts. This event is all about exploring fresh tastes, exchanging ideas, and building connections through the universal language of food.",
   },
   {
     src: "/images/events/4.avif",
@@ -141,7 +141,7 @@ export default function Events() {
     <div className={styles.container}>
       <main className={styles.main}>
         <section className={styles.hero}>
-          <p className={styles.eyebrow}>What We're Cookin'</p>
+          <p className={styles.eyebrow}>What We&apos;re Cookin&apos;</p>
           <h1 className={styles.heading}>EVENTS</h1>
           <p className={styles.subheading}>
             Thoughtfully curated events built around food, culture, and
